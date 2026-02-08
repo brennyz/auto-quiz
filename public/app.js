@@ -297,11 +297,16 @@
 
   var STORY_CATEGORIES = ['biologie', 'aardrijkskunde', 'geschiedenis', 'wiskunde', 'dieren', 'algemeen'];
 
+  var FALLBACK_STORIES = [
+    { story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?', answer: 'spin' },
+    { story: 'Dit grote land ligt voor een groot deel in Azië. De hoofdstad is Moskou. Welk land?', answer: 'Rusland' },
+    { story: 'Een getal. Als je het deelt door 2 heb je 5. Welk getal?', answer: 'tien' },
+    { story: 'Dit orgaan in je lichaam pompt bloed rond. Welk orgaan?', answer: 'hart' },
+    { story: 'Een zoogdier dat in de zee leeft en heel groot kan worden. Welk dier?', answer: 'walvis' },
+    { story: 'Deze stad staat bekend om de Eiffeltoren. Welke stad?', answer: 'Parijs' }
+  ];
   function getFallbackStory() {
-    return {
-      story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?',
-      answer: 'spin'
-    };
+    return FALLBACK_STORIES[Math.floor(Math.random() * FALLBACK_STORIES.length)];
   }
 
   function fetchStory(category) {
@@ -355,32 +360,29 @@
   function runAfterStoryTTS(s) {
     if (btnSkipTts) btnSkipTts.hidden = true;
     stopSpeaking();
-    countdownEl.textContent = '3… 2… 1…';
-    playCountdownAudio().then(function () {
-      restoreWaitMusic();
-      countdownEl.textContent = 'Antwoord!';
-      countdownEl.setAttribute('aria-live', 'polite');
-      if (countdownEl.classList) countdownEl.classList.add('listening');
-      var listeningLabel = setTimeout(function () {
-        countdownEl.textContent = 'Luisteren…';
-      }, 1500);
-      listenForAnswer(10000).then(function (answers) {
-        clearTimeout(listeningLabel);
-        countdownEl.classList.remove('listening');
-        countdownEl.textContent = '';
-        var someoneCorrect = false;
-        var i;
-        if (Array.isArray(answers) && answers.length > 0) {
-          for (i = 0; i < answers.length; i++) {
-            if (isCorrect(answers[i], s.answer)) {
-              someoneCorrect = true;
-              break;
-            }
+    restoreWaitMusic();
+    countdownEl.textContent = 'Antwoord!';
+    countdownEl.setAttribute('aria-live', 'polite');
+    if (countdownEl.classList) countdownEl.classList.add('listening');
+    var listeningLabel = setTimeout(function () {
+      countdownEl.textContent = 'Luisteren…';
+    }, 1500);
+    listenForAnswer(10000).then(function (answers) {
+      clearTimeout(listeningLabel);
+      countdownEl.classList.remove('listening');
+      countdownEl.textContent = '';
+      var someoneCorrect = false;
+      var i;
+      if (Array.isArray(answers) && answers.length > 0) {
+        for (i = 0; i < answers.length; i++) {
+          if (isCorrect(answers[i], s.answer)) {
+            someoneCorrect = true;
+            break;
           }
         }
-        if (someoneCorrect) score++;
-        showFeedback(someoneCorrect, s.answer, answers.length);
-      });
+      }
+      if (someoneCorrect) score++;
+      showFeedback(someoneCorrect, s.answer, answers.length);
     });
   }
 

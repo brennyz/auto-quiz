@@ -49,10 +49,40 @@ git push -u origin main
    - **Build command:** `node scripts/build-env.js`
    - **Publish directory:** `public`
    - **Base directory:** (leeg)
-6. **Environment variables** (Settings → Environment variables):
-   - **`GEMINI_API_KEY`** = je Google Gemini API-key (voor verhalen genereren). **Nooit in code of repo zetten** — alleen in Netlify invullen.
-   - Optioneel: `SUPABASE_URL`, `SUPABASE_ANON_KEY` (als je Supabase later weer gebruikt)
+6. **Environment variables** — zie sectie hieronder (Gemini API-key).
 7. **Deploy site**.
+
+---
+
+## Gemini API-key instellen (verplicht voor verhalen)
+
+Zonder deze key geeft de Netlify Function `generate-story` een 500 en gebruikt de app alleen fallbackverhalen.
+
+### Stap 1: Key aanmaken
+
+1. Ga naar **[Google AI Studio → API keys](https://aistudio.google.com/app/apikey)**.
+2. Log in met je Google-account.
+3. Klik op **Create API key** (of kies een bestaand project).
+4. Kopieer de key (begint vaak met `AIza...`). **Deel deze key nooit in code of repo.**
+
+### Stap 2: Key in Netlify zetten
+
+1. Ga naar **[app.netlify.com](https://app.netlify.com)** en open je site (bijv. car-quiz-pwa).
+2. Ga naar **Site configuration** → **Environment variables** (of: **Site settings** → **Environment variables**).
+3. Klik **Add a variable** of **Add environment variable**.
+4. **Key:** `GEMINI_API_KEY` (exact zo, geen spaties).
+5. **Value:** plak je gekopieerde API-key.
+6. **Scopes:** kies **All scopes** of in ieder geval **Functions**.
+7. Klik **Save** of **Create variable**.
+
+### Stap 3: Opnieuw deployen
+
+Na het toevoegen of wijzigen van een env var moet de site opnieuw gedeployed worden:
+
+- **Site configuration** → **Deploys** → **Trigger deploy** → **Deploy site**,  
+  of push een commit naar GitHub (als Continuous deployment aan staat).
+
+Daarna gebruikt de app de key alleen **server-side** in de Netlify Function; de key komt nooit in de frontend of in de repo.
 
 ### Optie B: Via Netlify CLI
 
@@ -64,12 +94,13 @@ netlify init
 
 Kies **Create & configure a new site**, koppel aan je Netlify-account en aan de bestaande GitHub-repo (of **Link to existing site** als de site al bestaat).
 
-Env vars instellen:
+Env vars instellen (verplicht voor verhalen: GEMINI_API_KEY):
 
 ```powershell
-netlify env:set SUPABASE_URL "https://xxx.supabase.co"
-netlify env:set SUPABASE_ANON_KEY "jouw-anon-key"
+netlify env:set GEMINI_API_KEY "AIza..." 
 ```
+
+(Vervang `AIza...` door je echte key van [Google AI Studio](https://aistudio.google.com/app/apikey). Optioneel: `SUPABASE_URL`, `SUPABASE_ANON_KEY`.)
 
 Deploy:
 
