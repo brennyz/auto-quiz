@@ -15,8 +15,11 @@
     feedback: document.getElementById('screen-feedback'),
     end: document.getElementById('screen-end')
   };
-  var btnStart = document.getElementById('btn-start');
+  var btnStart5 = document.getElementById('btn-start-5');
+  var btnStart10 = document.getElementById('btn-start-10');
+  var btnStart15 = document.getElementById('btn-start-15');
   var btnNext = document.getElementById('btn-next');
+  var btnSkipTts = document.getElementById('btn-skip-tts');
   var btnRestart = document.getElementById('btn-restart');
   var questionText = document.getElementById('question-text');
   var countdownEl = document.getElementById('countdown');
@@ -26,9 +29,11 @@
   var progressText = document.getElementById('progress-text');
   var audioCountdown = document.getElementById('audio-countdown');
 
-  var questions = [];
+  var storiesPerRound = 10;
   var currentIndex = 0;
   var score = 0;
+  var currentStory = null;
+  var storySkipped = false;
   var recognition = null;
   var micPermissionGranted = false;
 
@@ -290,27 +295,30 @@
     return a;
   }
 
-  function getFallbackQuestions() {
-    return [
-      { question_nl: 'Hoeveel poten heeft een spin?', answer_nl: 'acht' },
-      { question_nl: 'Wat is 7 maal 8?', answer_nl: '56' },
-      { question_nl: 'Welk orgaan pompt het bloed rond?', answer_nl: 'hart' },
-      { question_nl: 'Wat is de hoofdstad van Frankrijk?', answer_nl: 'Parijs' },
-      { question_nl: 'Hoeveel graden heeft een rechte hoek?', answer_nl: '90' }
-    ];
+  var STORY_CATEGORIES = ['biologie', 'aardrijkskunde', 'geschiedenis', 'wiskunde', 'dieren', 'algemeen'];
+
+  function getFallbackStory() {
+    return {
+      story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?',
+      answer: 'spin'
+    };
   }
 
-  function loadQuestions() {
-    return fetch('data/questions.json')
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+  function fetchStory(category) {
+    var base = typeof location !== 'undefined' && location.origin ? location.origin : '';
+    var url = base + '/.netlify/functions/generate-story';
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ category: category || STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)] })
+    })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('API error')); })
       .then(function (data) {
-        var list = Array.isArray(data) ? data : (data.questions || data.items || []);
-        if (list.length === 0) return getFallbackQuestions();
-        var perRound = Math.min(appConfig.questions_per_round || 10, 50);
-        return cryptoShuffle(list).slice(0, perRound);
+        if (data.story && data.answer) return { story: data.story, answer: data.answer };
+        return Promise.reject(new Error('Invalid response'));
       })
       .catch(function () {
-        return cryptoShuffle(getFallbackQuestions()).slice(0, 10);
+        return getFallbackStory();
       });
   }
 
@@ -322,49 +330,33 @@
     resumeAudioContext()
       .then(function () { return requestMicrophonePermission(); })
       .then(function () { return loadWaitMusic(); })
-      .then(function () { return loadQuestions(); })
-      .then(function (q) {
-        questions = q;
-        if (!questions.length) questions = cryptoShuffle(getFallbackQuestions()).slice(0, 10);
+      .then(function () {
         currentIndex = 0;
         score = 0;
         startWaitMusicContinuous();
         showScreen('question');
-        nextQuestion();
+        nextStory();
       })
       .catch(function () {
-        questions = cryptoShuffle(getFallbackQuestions()).slice(0, 10);
         currentIndex = 0;
         score = 0;
         startWaitMusicContinuous();
         showScreen('question');
-        nextQuestion();
+        nextStory();
       });
   }
 
   function updateProgress() {
     if (!progressText) return;
-    progressText.textContent = 'Vraag ' + (currentIndex + 1) + ' van ' + questions.length + ' · Score: ' + score;
+    progressText.textContent = 'Verhaal ' + (currentIndex + 1) + ' van ' + storiesPerRound + ' · Score: ' + score;
     progressText.hidden = false;
   }
 
-  function nextQuestion() {
-    if (currentIndex >= questions.length) {
-      stopWaitMusic();
-      endRound();
-      return;
-    }
-    updateProgress();
-    var q = questions[currentIndex];
-    questionText.textContent = q.question_nl;
-    countdownEl.textContent = '';
-
-    duckWaitMusic();
-    speak(q.question_nl).then(function () {
-      stopSpeaking();
-      countdownEl.textContent = '3… 2… 1…';
-      return playCountdownAudio();
-    }).then(function () {
+  function runAfterStoryTTS(s) {
+    if (btnSkipTts) btnSkipTts.hidden = true;
+    stopSpeaking();
+    countdownEl.textContent = '3… 2… 1…';
+    playCountdownAudio().then(function () {
       restoreWaitMusic();
       countdownEl.textContent = 'Antwoord!';
       countdownEl.setAttribute('aria-live', 'polite');
@@ -380,14 +372,62 @@
         var i;
         if (Array.isArray(answers) && answers.length > 0) {
           for (i = 0; i < answers.length; i++) {
-            if (isCorrect(answers[i], q.answer_nl)) {
+            if (isCorrect(answers[i], s.answer)) {
               someoneCorrect = true;
               break;
             }
           }
         }
         if (someoneCorrect) score++;
-        showFeedback(someoneCorrect, q.answer_nl, answers.length);
+        showFeedback(someoneCorrect, s.answer, answers.length);
+      });
+    });
+  }
+
+  function nextStory() {
+    storySkipped = false;
+    if (currentIndex >= storiesPerRound) {
+      stopWaitMusic();
+      endRound();
+      return;
+    }
+    updateProgress();
+    questionText.textContent = 'Verhaal laden…';
+    countdownEl.textContent = '';
+    if (btnSkipTts) btnSkipTts.hidden = true;
+
+    var category = STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)];
+    fetchStory(category).then(function (s) {
+      currentStory = s;
+      questionText.textContent = s.story;
+      countdownEl.textContent = '';
+      if (btnSkipTts) {
+        btnSkipTts.hidden = false;
+        btnSkipTts.onclick = function () {
+          storySkipped = true;
+          runAfterStoryTTS(s);
+        };
+      }
+
+      duckWaitMusic();
+      speak(s.story).then(function () {
+        if (storySkipped) return;
+        runAfterStoryTTS(s);
+      });
+    }).catch(function () {
+      currentStory = getFallbackStory();
+      questionText.textContent = currentStory.story;
+      if (btnSkipTts) {
+        btnSkipTts.hidden = false;
+        btnSkipTts.onclick = function () {
+          storySkipped = true;
+          runAfterStoryTTS(currentStory);
+        };
+      }
+      duckWaitMusic();
+      speak(currentStory.story).then(function () {
+        if (storySkipped) return;
+        runAfterStoryTTS(currentStory);
       });
     });
   }
@@ -423,19 +463,21 @@
     stopSpeaking();
     currentIndex++;
     showScreen('question');
-    nextQuestion();
+    nextStory();
   }
 
   function endRound() {
     if (progressText) progressText.hidden = true;
     showScreen('end');
-    scoreText.textContent = 'Je had ' + score + ' van de ' + questions.length + ' goed.';
-    speak('Ronde afgerond. Je had ' + score + ' van de ' + questions.length + ' goed.');
+    scoreText.textContent = 'Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+    speak('Ronde afgerond. Je had ' + score + ' van de ' + storiesPerRound + ' goed.');
     if (btnRestart && btnRestart.focus) setTimeout(function () { btnRestart.focus(); }, 100);
   }
 
   function init() {
-    btnStart.addEventListener('click', startQuiz);
+    if (btnStart5) btnStart5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
+    if (btnStart10) btnStart10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
+    if (btnStart15) btnStart15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
     btnNext.addEventListener('click', toNext);
     btnRestart.addEventListener('click', function () {
       if (progressText) progressText.hidden = true;

@@ -1,6 +1,6 @@
-# Auto-Quiz — PWA voor in de auto
+# Verhalenverteller — PWA voor in de auto
 
-Quiz voor middelbare school klas 1 (dieren, wiskunde, biologie, aardrijkskunde, etc.) met **TTS** via de autospeakers en **microfoon** om te antwoorden. Wachtmuziek + countdown-geluid. Vragen volledig **random** uit Supabase (~500 vragen); gedrag later bij te sturen via **WhatsApp** → Cursor/backend.
+**Verhalenverteller** voor middelbare school klas 1: de app genereert korte verhalen (biologie, aardrijkskunde, geschiedenis, etc.) via **Google Gemini 2.0 Flash**. Het verhaal wordt via **TTS** voorgelezen; er zit een verborgen antwoord in. Na een countdown (3, 2, 1, go) mag je het antwoord roepen — goed antwoord = punten. Wachtmuziek + microfoon (meerdere antwoorden in de auto).
 
 ## Stack
 
@@ -25,9 +25,8 @@ Quiz voor middelbare school klas 1 (dieren, wiskunde, biologie, aardrijkskunde, 
    - Build command: `node scripts/build-env.js`
    - Publish directory: `public`
 3. **Environment variables** in Netlify:
-   - `SUPABASE_URL` = je project URL
-   - `SUPABASE_ANON_KEY` = je anon/public key
-4. Deploy. De build schrijft `public/env.js` met deze waarden.
+   - **`GEMINI_API_KEY`** = je Google Gemini API-key (van [Google AI Studio](https://aistudio.google.com/app/apikey)). **Nooit in code of repo zetten** — alleen in Netlify invullen. De Netlify Function `generate-story` gebruikt deze key server-side.
+4. Deploy. De build schrijft `public/env.js` (optioneel).
 
 ## Geluiden
 

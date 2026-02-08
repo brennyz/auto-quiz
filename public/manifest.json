@@ -1,7 +1,7 @@
 {
-  "name": "Auto-Quiz",
-  "short_name": "Auto-Quiz",
-  "description": "Quiz in de auto — klas 1, TTS + stem",
+  "name": "Verhalenverteller",
+  "short_name": "Verhalenverteller",
+  "description": "Verhalenverteller in de auto — klas 1, TTS + verborgen antwoord",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f0f1a",

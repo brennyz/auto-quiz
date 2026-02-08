@@ -154,6 +154,59 @@ body {
   background: rgba(244, 114, 182, 0.12);
 }
 
+.choice-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.start-choices {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-choice {
+  min-width: 4rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--accent);
+}
+
+.btn-choice:hover,
+.btn-choice-default {
+  background: rgba(244, 114, 182, 0.2);
+  border-color: var(--accent);
+}
+
+.btn-choice-default {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.btn-skip {
+  margin: 0.75rem 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--text-muted);
+}
+
+.btn-skip:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-next-large {
+  min-height: 56px;
+  padding: 1.1rem 2.2rem;
+  font-size: 1.15rem;
+}
+
 /* Loading */
 .loader {
   width: 52px;

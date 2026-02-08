@@ -50,8 +50,8 @@ git push -u origin main
    - **Publish directory:** `public`
    - **Base directory:** (leeg)
 6. **Environment variables** (Settings → Environment variables):
-   - `SUPABASE_URL` = je Supabase project URL
-   - `SUPABASE_ANON_KEY` = je Supabase anon key
+   - **`GEMINI_API_KEY`** = je Google Gemini API-key (voor verhalen genereren). **Nooit in code of repo zetten** — alleen in Netlify invullen.
+   - Optioneel: `SUPABASE_URL`, `SUPABASE_ANON_KEY` (als je Supabase later weer gebruikt)
 7. **Deploy site**.
 
 ### Optie B: Via Netlify CLI

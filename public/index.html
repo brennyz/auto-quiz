@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0f0f1a" />
-  <meta name="description" content="Quiz in de auto — middelbare school klas 1, TTS + stem" />
-  <title>Auto-Quiz</title>
+  <meta name="description" content="Verhalenverteller in de auto — klas 1, TTS + verborgen antwoord" />
+  <title>Auto-Verhalenverteller</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preload" href="sounds/wait-music.wav" as="fetch" />
@@ -14,36 +14,42 @@
 <body>
   <div id="app">
     <header class="header">
-      <h1>Auto-Quiz</h1>
-      <p class="subtitle">Klas 1 — Dieren, wiskunde, biologie & meer</p>
+      <h1>Verhalenverteller</h1>
+      <p class="subtitle">Klas 1 — Verhaal met verborgen antwoord, daarna raden</p>
       <p class="progress" id="progress-text" aria-live="polite" hidden></p>
     </header>
 
     <main class="main">
       <!-- Startscherm -->
       <section id="screen-start" class="screen active">
-        <p class="instruction">Druk op start en sta microfoon toe. De vraag wordt voorgelezen, daarna klinkt de countdown (3, 2, 1, go) — dan antwoord je hardop.</p>
-        <button id="btn-start" class="btn btn-primary" type="button" aria-label="Start de quiz">Start quiz</button>
+        <p class="instruction">Kies hoeveel verhalen en sta microfoon toe. Er komt een verhaal (TTS), daarna de countdown — dan roep je het antwoord. Goed = punten.</p>
+        <p class="choice-label">Hoeveel verhalen?</p>
+        <div class="start-choices">
+          <button id="btn-start-5" class="btn btn-choice" type="button" aria-label="Start met 5 verhalen">5</button>
+          <button id="btn-start-10" class="btn btn-choice btn-choice-default" type="button" aria-label="Start met 10 verhalen">10</button>
+          <button id="btn-start-15" class="btn btn-choice" type="button" aria-label="Start met 15 verhalen">15</button>
+        </div>
       </section>
 
       <!-- Wachtmuziek + laden -->
       <section id="screen-loading" class="screen">
         <div class="loader" aria-hidden="true"></div>
-        <p>Vragen laden…</p>
+        <p>Verhalen voorbereiden…</p>
       </section>
 
-      <!-- Vraag + countdown -->
+      <!-- Verhaal + countdown -->
       <section id="screen-question" class="screen">
         <p id="question-text" class="question-text"></p>
+        <button id="btn-skip-tts" class="btn btn-skip" type="button" aria-label="Sla verhaal over, ga naar countdown" hidden>Naar countdown</button>
         <div id="countdown" class="countdown" aria-live="polite"></div>
-        <p class="hint">Na “3, 2, 1, go” antwoord je hardop. Wachtmuziek speelt als ondersteuning.</p>
+        <p class="hint">Na de countdown roep je het antwoord. Wachtmuziek als ondersteuning.</p>
       </section>
 
       <!-- Feedback -->
       <section id="screen-feedback" class="screen">
         <p id="feedback-result" class="feedback-result"></p>
         <p id="feedback-answer" class="feedback-answer"></p>
-        <button id="btn-next" class="btn btn-secondary" type="button" aria-label="Volgende vraag">Volgende</button>
+        <button id="btn-next" class="btn btn-secondary btn-next-large" type="button" aria-label="Volgende verhaal">Volgende</button>
       </section>
 
       <!-- Einde ronde -->
@@ -55,7 +61,7 @@
     </main>
 
     <footer class="footer">
-      <p>Quiz in de auto · TTS via auto-speakers</p>
+      <p>Verhalenverteller in de auto · TTS via auto-speakers</p>
     </footer>
   </div>
 

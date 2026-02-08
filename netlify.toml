@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# SPA: alle paden naar index.html (voor PWA start_url)
+# SPA: alle paden naar index.html; /.netlify/functions/* wordt door Netlify apart afgehandeld
 [[redirects]]
   from = "/*"
   to = "/index.html"
