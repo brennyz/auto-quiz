@@ -43,7 +43,7 @@ Plaats `icon-192.png` en `icon-512.png` in `public/icons/` voor “Add to Home S
 - Vragen staan in Supabase-tabel `questions` (categorieën: dieren, wiskunde, biologie, aardrijkskunde, geschiedenis, taal, algemeen).
 - De app haalt tot 500 vragen op en kiest daar **random** een ronde uit (aantal per ronde via `app_config.questions_per_round`).
 - **Wikipedia-vragen genereren**: `node scripts/fetch-wikipedia-questions.js` haalt ~500+ Nederlandse vragen op uit nl.wikipedia.org en schrijft `data/wikipedia-questions.json` en `data/wikipedia-questions.sql`. Voer het gegenereerde SQL uit in Supabase SQL Editor (na de eerste migratie). Optioneel: `TARGET=300 node scripts/fetch-wikipedia-questions.js` voor minder vragen.
-- **Import**: voorbeeldvragen staan ook in `supabase/seed.sql` en `data/questions-sample.json`. Later: WhatsApp-bot ontvangt “voeg vraag toe: …” en schrijft naar Supabase.
+- **Opruimen**: `node scripts/clean-questions.js` verwijdert vragen met foute antwoorden (adjectieven zoals “nationale” bij “nationele vogel”). Leest en overschrijft `public/data/questions.json`.
 
 ## Werking op de achtergrond bijschaven (WhatsApp → Cursor)
 

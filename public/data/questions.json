@@ -36,31 +36,10 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Klinische biologie?",
-    "answer_nl": "klinische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Klinische_biologie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Medische biologie?",
-    "answer_nl": "medische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Medische_biologie"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Milieubiologie?",
     "answer_nl": "milieubiologie",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Milieubiologie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Moleculaire biologie?",
-    "answer_nl": "moleculaire",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Moleculaire_biologie"
   },
   {
     "category": "biologie",
@@ -141,13 +120,6 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Bijzondere biologie?",
-    "answer_nl": "bijzondere",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Bijzondere_biologie"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Binoculair gezichtsvermogen?",
     "answer_nl": "binoculair",
     "difficulty": 1,
@@ -169,20 +141,6 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Bioanorganische chemie?",
-    "answer_nl": "bioanorganische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Bioanorganische_chemie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Biochemisch zuurstofverbruik?",
-    "answer_nl": "biochemisch",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Biochemisch_zuurstofverbruik"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Biogeografie?",
     "answer_nl": "biogeografie",
     "difficulty": 1,
@@ -194,13 +152,6 @@
     "answer_nl": "biologie",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Biologie_Olympiade"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Biologisch zuurstofverbruik?",
-    "answer_nl": "biologisch",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Biologisch_zuurstofverbruik"
   },
   {
     "category": "biologie",
@@ -281,13 +232,6 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Chemische biologie?",
-    "answer_nl": "chemische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Chemische_biologie"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Chemosynthese?",
     "answer_nl": "chemosynthese",
     "difficulty": 1,
@@ -302,38 +246,10 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Copley Medal?",
-    "answer_nl": "copley",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Copley_Medal"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Cryptochroom?",
     "answer_nl": "cryptochroom",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Cryptochroom"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Culturele evolutie?",
-    "answer_nl": "culturele",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Culturele_evolutie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Cuvet?",
-    "answer_nl": "cuvet",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Cuvet"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Data- en Kennishub Gezond Stedelijk Leve?",
-    "answer_nl": "data-",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Data-_en_Kennishub_Gezond_Stedelijk_Leven"
   },
   {
     "category": "biologie",
@@ -355,27 +271,6 @@
     "answer_nl": "energiemobilisatie",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Energiemobilisatie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Ex situ?",
-    "answer_nl": "ex",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Ex_situ"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Ex vivo?",
-    "answer_nl": "ex",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Ex_vivo"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Experimentele biologie?",
-    "answer_nl": "experimentele",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_biologie"
   },
   {
     "category": "biologie",
@@ -428,20 +323,6 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is Generatio spontanea?",
-    "answer_nl": "generatio",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Generatio_spontanea"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Genetische associatie?",
-    "answer_nl": "genetische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Genetische_associatie"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is Geotaxie?",
     "answer_nl": "geotaxie",
     "difficulty": 1,
@@ -453,20 +334,6 @@
     "answer_nl": "glyconutriënten",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Glyconutri%C3%ABnten"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Guttule?",
-    "answer_nl": "guttule",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Guttule"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Leon F. Harvey?",
-    "answer_nl": "leon",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Leon_F._Harvey"
   },
   {
     "category": "biologie",
@@ -498,38 +365,10 @@
   },
   {
     "category": "biologie",
-    "question_nl": "Wat is In situ?",
-    "answer_nl": "in",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/In_situ"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is In vitro?",
-    "answer_nl": "in",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/In_vitro"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is In vivo?",
-    "answer_nl": "in",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/In_vivo"
-  },
-  {
-    "category": "biologie",
     "question_nl": "Wat is INaturalist?",
     "answer_nl": "inaturalist",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/INaturalist"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is International Genetically Engineered Mac?",
-    "answer_nl": "international",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/International_Genetically_Engineered_Machine_competition"
   },
   {
     "category": "biologie",
@@ -544,13 +383,6 @@
     "answer_nl": "klonen",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Klonen_(biologie)"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Kunstmatige selectie?",
-    "answer_nl": "kunstmatige",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Kunstmatige_selectie"
   },
   {
     "category": "biologie",
@@ -572,20 +404,6 @@
     "answer_nl": "leven",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Leven"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Levend wezen?",
-    "answer_nl": "levend",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Levend_wezen"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Levende wezens?",
-    "answer_nl": "levende",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Levende_wezens"
   },
   {
     "category": "biologie",
@@ -614,20 +432,6 @@
     "answer_nl": "magnetoceptie",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Magnetoceptie"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Marine Biological Association?",
-    "answer_nl": "marine",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Marine_Biological_Association"
-  },
-  {
-    "category": "biologie",
-    "question_nl": "Wat is Mathematische biologie?",
-    "answer_nl": "mathematische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Mathematische_biologie"
   },
   {
     "category": "biologie",
@@ -953,13 +757,6 @@
   },
   {
     "category": "wiskunde",
-    "question_nl": "Wat is Experimentele wiskunde?",
-    "answer_nl": "experimentele",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_wiskunde"
-  },
-  {
-    "category": "wiskunde",
     "question_nl": "Wat is Financiële wiskunde?",
     "answer_nl": "financiële",
     "difficulty": 1,
@@ -1051,13 +848,6 @@
   },
   {
     "category": "wiskunde",
-    "question_nl": "Wat is Internationale Wiskundige Unie?",
-    "answer_nl": "internationale",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Wiskundige_Unie"
-  },
-  {
-    "category": "wiskunde",
     "question_nl": "Wat is Kalman-filter?",
     "answer_nl": "kalman-filter",
     "difficulty": 1,
@@ -1086,24 +876,10 @@
   },
   {
     "category": "wiskunde",
-    "question_nl": "Wat is Mathematische fysica?",
-    "answer_nl": "mathematische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Mathematische_fysica"
-  },
-  {
-    "category": "wiskunde",
     "question_nl": "Wat is Mittag-Leffler-instituut?",
     "answer_nl": "mittag-leffler-instituut",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Mittag-Leffler-instituut"
-  },
-  {
-    "category": "wiskunde",
-    "question_nl": "Wat is Nederlandse Vereniging van Wiskundelerar?",
-    "answer_nl": "nederlandse",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Nederlandse_Vereniging_van_Wiskundeleraren"
   },
   {
     "category": "wiskunde",
@@ -1195,13 +971,6 @@
     "answer_nl": "tdr-vergelijking",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/TDR-vergelijking"
-  },
-  {
-    "category": "wiskunde",
-    "question_nl": "Wat is Theoretische biologie?",
-    "answer_nl": "theoretische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Theoretische_biologie"
   },
   {
     "category": "wiskunde",
@@ -1321,13 +1090,6 @@
     "answer_nl": "natuur",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Natuur_(wildernis)"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is Natuur?",
-    "answer_nl": "natuur",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Natuur_(werkelijkheid)"
   },
   {
     "category": "algemeen",
@@ -1604,20 +1366,6 @@
   },
   {
     "category": "dieren",
-    "question_nl": "Wat is Vogels?",
-    "answer_nl": "vogels",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Vogels_(taxonomie)"
-  },
-  {
-    "category": "dieren",
-    "question_nl": "Wat is Amerikaanse stormmeeuw?",
-    "answer_nl": "amerikaanse",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Amerikaanse_stormmeeuw"
-  },
-  {
-    "category": "dieren",
     "question_nl": "Wat is Archaeopterygidae?",
     "answer_nl": "archaeopterygidae",
     "difficulty": 1,
@@ -1688,13 +1436,6 @@
   },
   {
     "category": "dieren",
-    "question_nl": "Wat is El Jardí dels Ocells?",
-    "answer_nl": "el",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/El_Jard%C3%AD_dels_Ocells"
-  },
-  {
-    "category": "dieren",
     "question_nl": "Wat is Euornithes?",
     "answer_nl": "euornithes",
     "difficulty": 1,
@@ -1727,13 +1468,6 @@
     "answer_nl": "metaves",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Metaves"
-  },
-  {
-    "category": "dieren",
-    "question_nl": "Wat is Nationale vogel?",
-    "answer_nl": "nationale",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Nationale_vogel"
   },
   {
     "category": "dieren",
@@ -2136,13 +1870,6 @@
   },
   {
     "category": "aardrijkskunde",
-    "question_nl": "Wat is De Beemden?",
-    "answer_nl": "de",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/De_Beemden_(Landen)"
-  },
-  {
-    "category": "aardrijkskunde",
     "question_nl": "Wat is Eliksem?",
     "answer_nl": "eliksem",
     "difficulty": 1,
@@ -2154,13 +1881,6 @@
     "answer_nl": "ezemaal",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Ezemaal"
-  },
-  {
-    "category": "aardrijkskunde",
-    "question_nl": "Wat is FC Landen?",
-    "answer_nl": "fc",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/FC_Landen"
   },
   {
     "category": "aardrijkskunde",
@@ -2224,13 +1944,6 @@
     "answer_nl": "slag",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Slag_bij_Neerwinden_(1693)"
-  },
-  {
-    "category": "aardrijkskunde",
-    "question_nl": "Wat is Slag bij Neerwinden?",
-    "answer_nl": "slag",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Slag_bij_Neerwinden_(1793)"
   },
   {
     "category": "aardrijkskunde",
@@ -2332,20 +2045,6 @@
   },
   {
     "category": "algemeen",
-    "question_nl": "Wat is Experimentele natuurkunde?",
-    "answer_nl": "experimentele",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_natuurkunde"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is Klassieke natuurkunde?",
-    "answer_nl": "klassieke",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Klassieke_natuurkunde"
-  },
-  {
-    "category": "algemeen",
     "question_nl": "Wat is Aanvangsstabiliteit?",
     "answer_nl": "aanvangsstabiliteit",
     "difficulty": 1,
@@ -2437,13 +2136,6 @@
   },
   {
     "category": "algemeen",
-    "question_nl": "Wat is De beghinselen der weeghconst?",
-    "answer_nl": "de",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/De_beghinselen_der_weeghconst"
-  },
-  {
-    "category": "algemeen",
     "question_nl": "Wat is Beker der rechtvaardigheid?",
     "answer_nl": "beker",
     "difficulty": 1,
@@ -2525,13 +2217,6 @@
     "answer_nl": "celsius",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Celsius"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is Centrale kracht?",
-    "answer_nl": "centrale",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Centrale_kracht"
   },
   {
     "category": "algemeen",
@@ -3186,20 +2871,6 @@
   },
   {
     "category": "algemeen",
-    "question_nl": "Wat is Chemische technologie?",
-    "answer_nl": "chemische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Chemische_technologie"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is Chemische thermodynamica?",
-    "answer_nl": "chemische",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Chemische_thermodynamica"
-  },
-  {
-    "category": "algemeen",
     "question_nl": "Wat is Chemurgie?",
     "answer_nl": "chemurgie",
     "difficulty": 1,
@@ -3218,13 +2889,6 @@
     "answer_nl": "corpuscularianisme",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Corpuscularianisme"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is De novo?",
-    "answer_nl": "de",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/De_novo"
   },
   {
     "category": "algemeen",
@@ -3267,13 +2931,6 @@
     "answer_nl": "internationaal",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Internationaal_Instituut_voor_Fysica_en_Chemie"
-  },
-  {
-    "category": "algemeen",
-    "question_nl": "Wat is Internationale Unie voor Zuivere en Toeg?",
-    "answer_nl": "internationale",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Unie_voor_Zuivere_en_Toegepaste_Scheikunde"
   },
   {
     "category": "algemeen",
@@ -3550,13 +3207,6 @@
   },
   {
     "category": "taal",
-    "question_nl": "Wat is Internationale Moedertaaldag?",
-    "answer_nl": "internationale",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Moedertaaldag"
-  },
-  {
-    "category": "taal",
     "question_nl": "Wat is Isogram?",
     "answer_nl": "isogram",
     "difficulty": 1,
@@ -3578,13 +3228,6 @@
   },
   {
     "category": "taal",
-    "question_nl": "Wat is Klassieke talen?",
-    "answer_nl": "klassieke",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Klassieke_talen"
-  },
-  {
-    "category": "taal",
     "question_nl": "Wat is Language Proficiency Exam?",
     "answer_nl": "language",
     "difficulty": 1,
@@ -3596,20 +3239,6 @@
     "answer_nl": "leemte",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Leemte_in_de_taal"
-  },
-  {
-    "category": "taal",
-    "question_nl": "Wat is Levende taal?",
-    "answer_nl": "levende",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Levende_taal"
-  },
-  {
-    "category": "taal",
-    "question_nl": "Wat is Levende talen?",
-    "answer_nl": "levende",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Levende_talen"
   },
   {
     "category": "taal",
@@ -3715,20 +3344,6 @@
     "answer_nl": "moedertaalspreker",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Moedertaalspreker"
-  },
-  {
-    "category": "taal",
-    "question_nl": "Wat is Officiële taal?",
-    "answer_nl": "officiële",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Offici%C3%ABle_taal"
-  },
-  {
-    "category": "taal",
-    "question_nl": "Wat is Officiële talen van de Verenigde Naties?",
-    "answer_nl": "officiële",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Offici%C3%ABle_talen_van_de_Verenigde_Naties"
   },
   {
     "category": "taal",
@@ -4030,13 +3645,6 @@
     "answer_nl": "volkstaal",
     "difficulty": 1,
     "source_url": "https://nl.wikipedia.org/wiki/Volkstaal_(moedertaal)"
-  },
-  {
-    "category": "taal",
-    "question_nl": "Wat is Volkstaal?",
-    "answer_nl": "volkstaal",
-    "difficulty": 1,
-    "source_url": "https://nl.wikipedia.org/wiki/Volkstaal_(register)"
   },
   {
     "category": "taal",
