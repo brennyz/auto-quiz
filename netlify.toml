@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "node scripts/build-env.js"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA: alle paden naar index.html (voor PWA start_url)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+
+:root {
+  --bg: #0f0f1a;
+  --bg-card: rgba(26, 26, 46, 0.95);
+  --surface: #1a1a2e;
+  --accent: #f472b6;
+  --accent-dim: #ec4899;
+  --accent-glow: rgba(244, 114, 182, 0.35);
+  --correct: #34d399;
+  --incorrect: #f87171;
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --font: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-glow), transparent),
+    linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+  color: var(--text);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#app {
+  max-width: 420px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.main {
+  min-height: 300px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  animation: fade 0.35s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.instruction {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  color: white;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px var(--accent-glow);
+  background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: rgba(244, 114, 182, 0.12);
+}
+
+/* Loading */
+.loader {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1rem;
+  border: 4px solid var(--surface);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#screen-loading p {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Question */
+.question-text {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  padding: 0 0.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.countdown {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: var(--accent);
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.hint {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Feedback */
+.feedback-result {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-result.correct {
+  color: var(--correct);
+  text-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+}
+
+.feedback-result.incorrect {
+  color: var(--incorrect);
+}
+
+.feedback-answer {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* End */
+.score-text {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Score badge (optional, can add in HTML later) */
+.score-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}

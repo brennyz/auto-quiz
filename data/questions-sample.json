@@ -1,0 +1,18 @@
+[
+  {"category": "dieren", "question_nl": "Hoeveel poten heeft een spin?", "answer_nl": "acht", "difficulty": 1},
+  {"category": "dieren", "question_nl": "Welk zoogdier vliegt?", "answer_nl": "vleermuis", "difficulty": 1},
+  {"category": "dieren", "question_nl": "Wat is het grootste landzoogdier?", "answer_nl": "olifant", "difficulty": 1},
+  {"category": "dieren", "question_nl": "Welk dier heeft de langste nek?", "answer_nl": "giraffe", "difficulty": 1},
+  {"category": "wiskunde", "question_nl": "Wat is 7 maal 8?", "answer_nl": "56", "difficulty": 1},
+  {"category": "wiskunde", "question_nl": "Hoeveel is 144 gedeeld door 12?", "answer_nl": "12", "difficulty": 1},
+  {"category": "wiskunde", "question_nl": "Wat is de wortel van 81?", "answer_nl": "9", "difficulty": 1},
+  {"category": "wiskunde", "question_nl": "Hoeveel graden heeft een rechte hoek?", "answer_nl": "90", "difficulty": 1},
+  {"category": "biologie", "question_nl": "Welk orgaan pompt het bloed rond?", "answer_nl": "hart", "difficulty": 1},
+  {"category": "biologie", "question_nl": "Hoe heet het groene pigment in bladeren?", "answer_nl": "chlorofyl", "difficulty": 1},
+  {"category": "biologie", "question_nl": "Uit hoeveel kamers bestaat het menselijk hart?", "answer_nl": "vier", "difficulty": 1},
+  {"category": "aardrijkskunde", "question_nl": "Wat is de hoofdstad van Frankrijk?", "answer_nl": "Parijs", "difficulty": 1},
+  {"category": "aardrijkskunde", "question_nl": "In welk werelddeel ligt Egypte?", "answer_nl": "Afrika", "difficulty": 1},
+  {"category": "aardrijkskunde", "question_nl": "Hoeveel provincies heeft Nederland?", "answer_nl": "12", "difficulty": 1},
+  {"category": "algemeen", "question_nl": "Welke planeet staat het dichtst bij de zon?", "answer_nl": "Mercurius", "difficulty": 1},
+  {"category": "geschiedenis", "question_nl": "In welk jaar viel de Berlijnse Muur?", "answer_nl": "1989", "difficulty": 1}
+]
