@@ -48,9 +48,17 @@
 
   function resumeAudioContext() {
     var ctx = getAudioContext();
-    if (ctx && ctx.state === 'suspended') {
-      ctx.resume().catch(function () {});
-    }
+    if (!ctx) return Promise.resolve();
+    if (ctx.state === 'suspended') return ctx.resume().catch(function () {});
+    return Promise.resolve();
+  }
+
+  function unlockCountdownAudio() {
+    if (!audioCountdown || !audioCountdown.play) return;
+    var p = audioCountdown.play();
+    if (p && p.then) p.then(function () { audioCountdown.pause(); audioCountdown.currentTime = 0; }).catch(function () {});
+    else audioCountdown.pause();
+    audioCountdown.currentTime = 0;
   }
 
   function loadWaitMusic() {
@@ -309,8 +317,10 @@
   function startQuiz() {
     showScreen('loading');
     countdownEl.textContent = '';
+    unlockCountdownAudio();
 
-    requestMicrophonePermission()
+    resumeAudioContext()
+      .then(function () { return requestMicrophonePermission(); })
       .then(function () { return loadWaitMusic(); })
       .then(function () { return loadQuestions(); })
       .then(function (q) {
@@ -351,6 +361,7 @@
 
     duckWaitMusic();
     speak(q.question_nl).then(function () {
+      stopSpeaking();
       countdownEl.textContent = '3… 2… 1…';
       return playCountdownAudio();
     }).then(function () {

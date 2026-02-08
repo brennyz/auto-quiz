@@ -1,9 +1,9 @@
-const CACHE = 'auto-quiz-v2';
+const CACHE = 'auto-quiz-v3';
 
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return cache.addAll(['index.html', 'styles.css', 'app.js', 'manifest.json', 'bg.png', 'data/questions.json']);
+      return cache.addAll(['index.html', 'styles.css', 'app.js', 'manifest.json', '/bg.png', 'data/questions.json']);
     }).then(function () { return self.skipWaiting(); })
   );
 });
