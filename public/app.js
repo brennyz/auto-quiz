@@ -475,11 +475,16 @@
   }
 
   function init() {
-    if (btnStart5) btnStart5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
-    if (btnStart10) btnStart10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
-    if (btnStart15) btnStart15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
-    if (btnNext) btnNext.addEventListener('click', toNext);
-    if (btnRestart) btnRestart.addEventListener('click', function () {
+    var b5 = document.getElementById('btn-start-5');
+    var b10 = document.getElementById('btn-start-10');
+    var b15 = document.getElementById('btn-start-15');
+    var bNext = document.getElementById('btn-next');
+    var bRestart = document.getElementById('btn-restart');
+    if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
+    if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
+    if (b15) b15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
+    if (bNext) bNext.addEventListener('click', toNext);
+    if (bRestart) bRestart.addEventListener('click', function () {
       if (progressText) progressText.hidden = true;
       showScreen('start');
     });
