@@ -1,0 +1,4097 @@
+[
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biologie?",
+    "answer_nl": "biologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Aerobiologie?",
+    "answer_nl": "aerobiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aerobiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biogeologie?",
+    "answer_nl": "biogeologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biogeologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biomimetica?",
+    "answer_nl": "biomimetica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biomimetica"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Hydrobiologie?",
+    "answer_nl": "hydrobiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hydrobiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Klinische biologie?",
+    "answer_nl": "klinische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Klinische_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Medische biologie?",
+    "answer_nl": "medische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Medische_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Milieubiologie?",
+    "answer_nl": "milieubiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Milieubiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Moleculaire biologie?",
+    "answer_nl": "moleculaire",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Moleculaire_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Neurobiologie?",
+    "answer_nl": "neurobiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neurobiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ontwikkelingsbiologie?",
+    "answer_nl": "ontwikkelingsbiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ontwikkelingsbiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Parasitologie?",
+    "answer_nl": "parasitologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Parasitologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Psychobiologie?",
+    "answer_nl": "psychobiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Psychobiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Visserijbiologie?",
+    "answer_nl": "visserijbiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Visserijbiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Aanpassingsvermogen?",
+    "answer_nl": "aanpassingsvermogen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aanpassingsvermogen"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Aerotolerantie?",
+    "answer_nl": "aerotolerantie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aerotolerantie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Aglyf?",
+    "answer_nl": "aglyf",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aglyf"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Auxospore?",
+    "answer_nl": "auxospore",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Auxospore"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Avondmens?",
+    "answer_nl": "avondmens",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Avondmens"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bijtkracht?",
+    "answer_nl": "bijtkracht",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bijtkracht"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bijzondere biologie?",
+    "answer_nl": "bijzondere",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bijzondere_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Binoculair gezichtsvermogen?",
+    "answer_nl": "binoculair",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Binoculair_gezichtsvermogen"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Binoculair zien?",
+    "answer_nl": "binoculair",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Binoculair_zien"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bioakoestiek?",
+    "answer_nl": "bioakoestiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bioakoestiek"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bioanorganische chemie?",
+    "answer_nl": "bioanorganische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bioanorganische_chemie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biochemisch zuurstofverbruik?",
+    "answer_nl": "biochemisch",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biochemisch_zuurstofverbruik"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biogeografie?",
+    "answer_nl": "biogeografie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biogeografie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biologie Olympiade?",
+    "answer_nl": "biologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biologie_Olympiade"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biologisch zuurstofverbruik?",
+    "answer_nl": "biologisch",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biologisch_zuurstofverbruik"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bioloog?",
+    "answer_nl": "bioloog",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bioloog"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biomathematica?",
+    "answer_nl": "biomathematica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biomathematica"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biomechanica?",
+    "answer_nl": "biomechanica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biomechanica"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bionica?",
+    "answer_nl": "bionica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bionica"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bionieuws?",
+    "answer_nl": "bionieuws",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bionieuws"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biostatistiek?",
+    "answer_nl": "biostatistiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biostatistiek"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Biosystematiek?",
+    "answer_nl": "biosystematiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Biosystematiek"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bioveiligheid?",
+    "answer_nl": "bioveiligheid",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bioveiligheid"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Bodem?",
+    "answer_nl": "bodem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bodem"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Braarudosphaera bigelowii?",
+    "answer_nl": "braarudosphaera",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Braarudosphaera_bigelowii"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Carpometacarpus?",
+    "answer_nl": "carpometacarpus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Carpometacarpus"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Chemische biologie?",
+    "answer_nl": "chemische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemische_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Chemosynthese?",
+    "answer_nl": "chemosynthese",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemosynthese"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is CLAW-hypothese?",
+    "answer_nl": "claw-hypothese",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/CLAW-hypothese"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Copley Medal?",
+    "answer_nl": "copley",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Copley_Medal"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Cryptochroom?",
+    "answer_nl": "cryptochroom",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cryptochroom"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Culturele evolutie?",
+    "answer_nl": "culturele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Culturele_evolutie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Cuvet?",
+    "answer_nl": "cuvet",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cuvet"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Data- en Kennishub Gezond Stedelijk Leve?",
+    "answer_nl": "data-",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Data-_en_Kennishub_Gezond_Stedelijk_Leven"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Dood?",
+    "answer_nl": "dood",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dood"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ecofysiologie?",
+    "answer_nl": "ecofysiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ecofysiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Energiemobilisatie?",
+    "answer_nl": "energiemobilisatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Energiemobilisatie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ex situ?",
+    "answer_nl": "ex",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ex_situ"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ex vivo?",
+    "answer_nl": "ex",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ex_vivo"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Experimentele biologie?",
+    "answer_nl": "experimentele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Exposome-NL?",
+    "answer_nl": "exposome-nl",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Exposome-NL"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Exposoom?",
+    "answer_nl": "exposoom",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Exposoom"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Filosofie van de biologie?",
+    "answer_nl": "filosofie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Filosofie_van_de_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Fitness?",
+    "answer_nl": "fitness",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fitness_(biologie)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Fotoforese?",
+    "answer_nl": "fotoforese",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fotoforese"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Fototaxis?",
+    "answer_nl": "fototaxis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fototaxis"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Frustule?",
+    "answer_nl": "frustule",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Frustule"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Generatio spontanea?",
+    "answer_nl": "generatio",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Generatio_spontanea"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Genetische associatie?",
+    "answer_nl": "genetische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Genetische_associatie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Geotaxie?",
+    "answer_nl": "geotaxie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geotaxie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Glyconutriënten?",
+    "answer_nl": "glyconutriënten",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Glyconutri%C3%ABnten"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Guttule?",
+    "answer_nl": "guttule",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Guttule"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Leon F. Harvey?",
+    "answer_nl": "leon",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leon_F._Harvey"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Humus?",
+    "answer_nl": "humus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Humus"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Hydrobioloog?",
+    "answer_nl": "hydrobioloog",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hydrobioloog"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Hysterese?",
+    "answer_nl": "hysterese",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hysterese"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Imbibitie?",
+    "answer_nl": "imbibitie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Imbibitie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is In situ?",
+    "answer_nl": "in",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/In_situ"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is In vitro?",
+    "answer_nl": "in",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/In_vitro"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is In vivo?",
+    "answer_nl": "in",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/In_vivo"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is INaturalist?",
+    "answer_nl": "inaturalist",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/INaturalist"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is International Genetically Engineered Mac?",
+    "answer_nl": "international",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/International_Genetically_Engineered_Machine_competition"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Kenmerkdetector?",
+    "answer_nl": "kenmerkdetector",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kenmerkdetector"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Klonen?",
+    "answer_nl": "klonen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Klonen_(biologie)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Kunstmatige selectie?",
+    "answer_nl": "kunstmatige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kunstmatige_selectie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Kwantumbiologie?",
+    "answer_nl": "kwantumbiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kwantumbiologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Lethargie?",
+    "answer_nl": "lethargie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lethargie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Leven?",
+    "answer_nl": "leven",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leven"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Levend wezen?",
+    "answer_nl": "levend",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Levend_wezen"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Levende wezens?",
+    "answer_nl": "levende",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Levende_wezens"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Levensvorm?",
+    "answer_nl": "levensvorm",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Levensvorm_(organisme)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Leversegmenten?",
+    "answer_nl": "leversegmenten",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leversegmenten"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Lotka-Volterravergelijking?",
+    "answer_nl": "lotka-volterravergelijking",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lotka-Volterravergelijking"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Magnetoceptie?",
+    "answer_nl": "magnetoceptie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Magnetoceptie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Marine Biological Association?",
+    "answer_nl": "marine",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Marine_Biological_Association"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Mathematische biologie?",
+    "answer_nl": "mathematische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mathematische_biologie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Matrijs?",
+    "answer_nl": "matrijs",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Matrijs_(biologie)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Morfometrie?",
+    "answer_nl": "morfometrie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Morfometrie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Myomeer?",
+    "answer_nl": "myomeer",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Myomeer"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Nanopore sequencing?",
+    "answer_nl": "nanopore",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Nanopore_sequencing"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Natuurstudie?",
+    "answer_nl": "natuurstudie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurstudie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Nectar?",
+    "answer_nl": "nectar",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Nectar_(methode)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Niet-cellulair leven?",
+    "answer_nl": "niet-cellulair",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Niet-cellulair_leven"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Notch-signalering?",
+    "answer_nl": "notch-signalering",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Notch-signalering"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ochtendmens?",
+    "answer_nl": "ochtendmens",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ochtendmens"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Opsine?",
+    "answer_nl": "opsine",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Opsine"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Organisatieniveau?",
+    "answer_nl": "organisatieniveau",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Organisatieniveau_(biologie)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Organisme?",
+    "answer_nl": "organisme",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Organisme"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Patroonvorming?",
+    "answer_nl": "patroonvorming",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Patroonvorming"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Ranunculus adoneus?",
+    "answer_nl": "ranunculus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ranunculus_adoneus"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Richtingzien?",
+    "answer_nl": "richtingzien",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Richtingzien"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is RNA-afhankelijke RNA-polymerase?",
+    "answer_nl": "rna-afhankelijke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/RNA-afhankelijke_RNA-polymerase"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Robert Kochprijs?",
+    "answer_nl": "robert",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Robert_Kochprijs"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Signaalkleur?",
+    "answer_nl": "signaalkleur",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Signaalkleur"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Signaalstof?",
+    "answer_nl": "signaalstof",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Signaalstof"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Soortgroep?",
+    "answer_nl": "soortgroep",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Soortgroep"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Specialisatie?",
+    "answer_nl": "specialisatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Specialisatie_(biologie)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Specimen?",
+    "answer_nl": "specimen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Specimen"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Speels?",
+    "answer_nl": "speels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Speels"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Spontane generatie?",
+    "answer_nl": "spontane",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spontane_generatie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Sterven?",
+    "answer_nl": "sterven",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Sterven"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Stichting Biowetenschappen en Maatschapp?",
+    "answer_nl": "stichting",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Stichting_Biowetenschappen_en_Maatschappij"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Stigmergie?",
+    "answer_nl": "stigmergie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Stigmergie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Stikstoffixatie?",
+    "answer_nl": "stikstoffixatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Stikstoffixatie"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Strooisellaag?",
+    "answer_nl": "strooisellaag",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Strooisellaag"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Structuurbiologie?",
+    "answer_nl": "structuurbiologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Structuurbiologie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskunde?",
+    "answer_nl": "wiskunde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Achtdamesprobleem?",
+    "answer_nl": "achtdamesprobleem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Achtdamesprobleem"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Afstand?",
+    "answer_nl": "afstand",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Afstand_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Aritmetisering van de analyse?",
+    "answer_nl": "aritmetisering",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aritmetisering_van_de_analyse"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Cepstrum?",
+    "answer_nl": "cepstrum",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cepstrum"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Clay Mathematics Institute?",
+    "answer_nl": "clay",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Clay_Mathematics_Institute"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Commensurabiliteit?",
+    "answer_nl": "commensurabiliteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Commensurabiliteit"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Conditie?",
+    "answer_nl": "conditie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Conditie_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Constant?",
+    "answer_nl": "constant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Constant_(eigenschap)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Coöperatief spel?",
+    "answer_nl": "coöperatief",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Co%C3%B6peratief_spel"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Deelrij?",
+    "answer_nl": "deelrij",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Deelrij"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Differentiaal?",
+    "answer_nl": "differentiaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Differentiaal"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is E-reeks?",
+    "answer_nl": "e-reeks",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/E-reeks"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Eigenwaardevergelijking?",
+    "answer_nl": "eigenwaardevergelijking",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Eigenwaardevergelijking"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Etnowiskunde?",
+    "answer_nl": "etnowiskunde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Etnowiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Evenwichtsvoorwaarde?",
+    "answer_nl": "evenwichtsvoorwaarde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Evenwichtsvoorwaarde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Experimentele wiskunde?",
+    "answer_nl": "experimentele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Financiële wiskunde?",
+    "answer_nl": "financiële",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Financi%C3%ABle_wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Gegeneraliseerde veelhoek?",
+    "answer_nl": "gegeneraliseerde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gegeneraliseerde_veelhoek"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Gegeneraliseerde vierhoek?",
+    "answer_nl": "gegeneraliseerde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gegeneraliseerde_vierhoek"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Gelijkheid?",
+    "answer_nl": "gelijkheid",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gelijkheid_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Gradiënt?",
+    "answer_nl": "gradiënt",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gradi%C3%ABnt"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Grootte?",
+    "answer_nl": "grootte",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Grootte"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Harmonische analyse?",
+    "answer_nl": "harmonische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Harmonische_analyse"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Hemelmechanica?",
+    "answer_nl": "hemelmechanica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hemelmechanica"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Hermitisch?",
+    "answer_nl": "hermitisch",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hermitisch"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Hogere wiskunde?",
+    "answer_nl": "hogere",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hogere_wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Idempotentie?",
+    "answer_nl": "idempotentie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Idempotentie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Increment?",
+    "answer_nl": "increment",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Increment"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Internationaal Wiskundecongres?",
+    "answer_nl": "internationaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Internationaal_Wiskundecongres"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Internationale Wiskundige Unie?",
+    "answer_nl": "internationale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Wiskundige_Unie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Kalman-filter?",
+    "answer_nl": "kalman-filter",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kalman-filter"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Koord om de aarde-puzzel?",
+    "answer_nl": "koord",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Koord_om_de_aarde-puzzel"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Korteweg-de Vries Instituut voor Wiskund?",
+    "answer_nl": "korteweg-de",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Korteweg-de_Vries_Instituut_voor_Wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Mathematicus?",
+    "answer_nl": "mathematicus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mathematicus"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Mathematische fysica?",
+    "answer_nl": "mathematische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mathematische_fysica"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Mittag-Leffler-instituut?",
+    "answer_nl": "mittag-leffler-instituut",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mittag-Leffler-instituut"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Nederlandse Vereniging van Wiskundelerar?",
+    "answer_nl": "nederlandse",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Nederlandse_Vereniging_van_Wiskundeleraren"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Niet-lineair systeem?",
+    "answer_nl": "niet-lineair",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Niet-lineair_systeem"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Normalisatiefactor?",
+    "answer_nl": "normalisatiefactor",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Normalisatiefactor"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Numerieke lineaire algebra?",
+    "answer_nl": "numerieke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Numerieke_lineaire_algebra"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Ojief?",
+    "answer_nl": "ojief",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ojief"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Perforatie?",
+    "answer_nl": "perforatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Perforatie_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Polaire ruimte?",
+    "answer_nl": "polaire",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Polaire_ruimte"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Probleem?",
+    "answer_nl": "probleem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Probleem_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Schaalfactor?",
+    "answer_nl": "schaalfactor",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Schaalfactor"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Sigmafunctie?",
+    "answer_nl": "sigmafunctie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Sigmafunctie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Sissa?",
+    "answer_nl": "sissa",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Sissa_(mythische_brahmaan)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Spectrum?",
+    "answer_nl": "spectrum",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spectrum_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Substitutie?",
+    "answer_nl": "substitutie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Substitutie_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is TDR-vergelijking?",
+    "answer_nl": "tdr-vergelijking",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/TDR-vergelijking"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Theoretische biologie?",
+    "answer_nl": "theoretische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Theoretische_biologie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Toegepaste wiskunde?",
+    "answer_nl": "toegepaste",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Toegepaste_wiskunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Transitiviteit?",
+    "answer_nl": "transitiviteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Transitiviteit_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Trend surface analysis?",
+    "answer_nl": "trend",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Trend_surface_analysis"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Trivialiteit?",
+    "answer_nl": "trivialiteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Trivialiteit_(wiskunde)"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Uniciteit?",
+    "answer_nl": "uniciteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Uniciteit"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Variabele?",
+    "answer_nl": "variabele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Variabele"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Werkelijke oneindigheid?",
+    "answer_nl": "werkelijke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Werkelijke_oneindigheid"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskundig Onderzoeksinstituut van Oberwo?",
+    "answer_nl": "wiskundig",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskundig_Onderzoeksinstituut_van_Oberwolfach"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskundige biologie?",
+    "answer_nl": "wiskundige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskundige_biologie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskundige ingenieurstechniek?",
+    "answer_nl": "wiskundige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskundige_ingenieurstechniek"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskundige natuurkunde?",
+    "answer_nl": "wiskundige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskundige_natuurkunde"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Wiskundige systeemtheorie?",
+    "answer_nl": "wiskundige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wiskundige_systeemtheorie"
+  },
+  {
+    "category": "wiskunde",
+    "question_nl": "Wat is Zuivere wiskunde?",
+    "answer_nl": "zuivere",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zuivere_wiskunde"
+  },
+  {
+    "category": "geschiedenis",
+    "question_nl": "Wat is Geschiedenis?",
+    "answer_nl": "geschiedenis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geschiedenis"
+  },
+  {
+    "category": "geschiedenis",
+    "question_nl": "Wat is Geschiedenispolitiek?",
+    "answer_nl": "geschiedenispolitiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geschiedenispolitiek"
+  },
+  {
+    "category": "geschiedenis",
+    "question_nl": "Wat is Gouden eeuw?",
+    "answer_nl": "gouden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gouden_eeuw_(metafoor)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuur?",
+    "answer_nl": "natuur",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuur_(wildernis)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuur?",
+    "answer_nl": "natuur",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuur_(werkelijkheid)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Louis Drent?",
+    "answer_nl": "louis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Louis_Drent"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuur en milieu?",
+    "answer_nl": "natuur",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuur_en_milieu"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuurbeeld?",
+    "answer_nl": "natuurbeeld",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurbeeld"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuurbegraafplaats?",
+    "answer_nl": "natuurbegraafplaats",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurbegraafplaats"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuuresthetiek?",
+    "answer_nl": "natuuresthetiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuuresthetiek"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuurschoon?",
+    "answer_nl": "natuurschoon",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurschoon"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Stichting Uniek Curaçao?",
+    "answer_nl": "stichting",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Stichting_Uniek_Cura%C3%A7ao"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuurtoerisme?",
+    "answer_nl": "natuurtoerisme",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurtoerisme"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Vroege Vogels?",
+    "answer_nl": "vroege",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vroege_Vogels"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Zoogdieren?",
+    "answer_nl": "zoogdieren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zoogdieren"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Afroinsectiphilia?",
+    "answer_nl": "afroinsectiphilia",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Afroinsectiphilia"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Afrotheria?",
+    "answer_nl": "afrotheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Afrotheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Anagalida?",
+    "answer_nl": "anagalida",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Anagalida"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Archonta?",
+    "answer_nl": "archonta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Archonta"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Australosphenida?",
+    "answer_nl": "australosphenida",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Australosphenida"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Cladotheria?",
+    "answer_nl": "cladotheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cladotheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Euarchonta?",
+    "answer_nl": "euarchonta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Euarchonta"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Euarchontoglires?",
+    "answer_nl": "euarchontoglires",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Euarchontoglires"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Ferae?",
+    "answer_nl": "ferae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ferae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Glires?",
+    "answer_nl": "glires",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Glires"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Hoefdieren?",
+    "answer_nl": "hoefdieren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hoefdieren"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Laurasiatheria?",
+    "answer_nl": "laurasiatheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Laurasiatheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Paenungulata?",
+    "answer_nl": "paenungulata",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Paenungulata"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Pegasoferae?",
+    "answer_nl": "pegasoferae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pegasoferae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Placentadieren?",
+    "answer_nl": "placentadieren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Placentadieren"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Placentofagie?",
+    "answer_nl": "placentofagie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Placentofagie"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Prototheria?",
+    "answer_nl": "prototheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Prototheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Simia?",
+    "answer_nl": "simia",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Simia"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Tethytheria?",
+    "answer_nl": "tethytheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Tethytheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Theria?",
+    "answer_nl": "theria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Theria_(zoogdieren)"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Theriiformes?",
+    "answer_nl": "theriiformes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Theriiformes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Trechnotheria?",
+    "answer_nl": "trechnotheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Trechnotheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Tribosphenida?",
+    "answer_nl": "tribosphenida",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Tribosphenida"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Walvissen en evenhoevigen?",
+    "answer_nl": "walvissen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Walvissen_en_evenhoevigen"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Xenarthra?",
+    "answer_nl": "xenarthra",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Xenarthra"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Zatheria?",
+    "answer_nl": "zatheria",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zatheria"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Zoogdieren in de tiende editie van Syste?",
+    "answer_nl": "zoogdieren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zoogdieren_in_de_tiende_editie_van_Systema_naturae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Roofvogels?",
+    "answer_nl": "roofvogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Roofvogels"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogels?",
+    "answer_nl": "vogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogels"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogels?",
+    "answer_nl": "vogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogels_(taxonomie)"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Amerikaanse stormmeeuw?",
+    "answer_nl": "amerikaanse",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Amerikaanse_stormmeeuw"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Archaeopterygidae?",
+    "answer_nl": "archaeopterygidae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Archaeopterygidae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Archaeopterygiformes?",
+    "answer_nl": "archaeopterygiformes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Archaeopterygiformes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Archaeornithes?",
+    "answer_nl": "archaeornithes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Archaeornithes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Avebrevicauda?",
+    "answer_nl": "avebrevicauda",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Avebrevicauda"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Avibase?",
+    "answer_nl": "avibase",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Avibase"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Confuciusornithidae?",
+    "answer_nl": "confuciusornithidae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Confuciusornithidae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Coraciae?",
+    "answer_nl": "coraciae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Coraciae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Cucuio?",
+    "answer_nl": "cucuio",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cucuio"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Draadslachtoffer?",
+    "answer_nl": "draadslachtoffer",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Draadslachtoffer"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is EBird?",
+    "answer_nl": "ebird",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/EBird"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is El Jardí dels Ocells?",
+    "answer_nl": "el",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/El_Jard%C3%AD_dels_Ocells"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Euornithes?",
+    "answer_nl": "euornithes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Euornithes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogels in de Filipijnen?",
+    "answer_nl": "vogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogels_in_de_Filipijnen"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Galloanserae?",
+    "answer_nl": "galloanserae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Galloanserae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Kipsant?",
+    "answer_nl": "kipsant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kipsant"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Metaves?",
+    "answer_nl": "metaves",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Metaves"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Nationale vogel?",
+    "answer_nl": "nationale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Nationale_vogel"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Navaornis?",
+    "answer_nl": "navaornis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Navaornis"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Neoaves?",
+    "answer_nl": "neoaves",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neoaves"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Neognathae?",
+    "answer_nl": "neognathae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neognathae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Neornithes?",
+    "answer_nl": "neornithes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neornithes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Neotropical Birds Online?",
+    "answer_nl": "neotropical",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neotropical_Birds_Online"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Oorsprong van de vogels?",
+    "answer_nl": "oorsprong",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Oorsprong_van_de_vogels"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Ornithothoraces?",
+    "answer_nl": "ornithothoraces",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ornithothoraces"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Ornithurae?",
+    "answer_nl": "ornithurae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ornithurae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Ornithuromorpha?",
+    "answer_nl": "ornithuromorpha",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ornithuromorpha"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Overwinteren?",
+    "answer_nl": "overwinteren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Overwinteren"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Palaeognathae?",
+    "answer_nl": "palaeognathae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Palaeognathae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Panaves?",
+    "answer_nl": "panaves",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Panaves"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Pangalliformes?",
+    "answer_nl": "pangalliformes",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pangalliformes"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Pindanetje?",
+    "answer_nl": "pindanetje",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pindanetje"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Pygostylia?",
+    "answer_nl": "pygostylia",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pygostylia"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Sauriurae?",
+    "answer_nl": "sauriurae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Sauriurae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Shoco?",
+    "answer_nl": "shoco",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Shoco"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Spanwijdte?",
+    "answer_nl": "spanwijdte",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spanwijdte_(vlucht)"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is DNA-onderzoek naar de taxonomie van de v?",
+    "answer_nl": "dna-onderzoek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/DNA-onderzoek_naar_de_taxonomie_van_de_vogels"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Telluraves?",
+    "answer_nl": "telluraves",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Telluraves"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Toom?",
+    "answer_nl": "toom",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Toom_(dieren)"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vetbolletje?",
+    "answer_nl": "vetbolletje",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vetbolletje"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogelasiel de Houtsnip?",
+    "answer_nl": "vogelasiel",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogelasiel_de_Houtsnip"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogelpark?",
+    "answer_nl": "vogelpark",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogelpark"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogelpoep?",
+    "answer_nl": "vogelpoep",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogelpoep"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogels in de tiende editie van Systema n?",
+    "answer_nl": "vogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogels_in_de_tiende_editie_van_Systema_naturae"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Vogelvereniging?",
+    "answer_nl": "vogelvereniging",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vogelvereniging"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Watervogels?",
+    "answer_nl": "watervogels",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Watervogels_(clade)"
+  },
+  {
+    "category": "dieren",
+    "question_nl": "Wat is Zygodactyl?",
+    "answer_nl": "zygodactyl",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zygodactyl"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Planten?",
+    "answer_nl": "planten",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Planten"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Aanplant?",
+    "answer_nl": "aanplant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aanplant"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Acetabularia?",
+    "answer_nl": "acetabularia",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Acetabularia"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Archaeplastida?",
+    "answer_nl": "archaeplastida",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Archaeplastida"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is C3-plant?",
+    "answer_nl": "c3-plant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/C3-plant"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is C4-plant?",
+    "answer_nl": "c4-plant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/C4-plant"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Chlorobionta?",
+    "answer_nl": "chlorobionta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chlorobionta"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Chloroplastida?",
+    "answer_nl": "chloroplastida",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chloroplastida"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Chromalveolata?",
+    "answer_nl": "chromalveolata",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chromalveolata"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Fragmoplast?",
+    "answer_nl": "fragmoplast",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fragmoplast"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Gingellikruid?",
+    "answer_nl": "gingellikruid",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gingellikruid"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Inzaai?",
+    "answer_nl": "inzaai",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Inzaai"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Leiplant?",
+    "answer_nl": "leiplant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leiplant"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Plantenrechten?",
+    "answer_nl": "plantenrechten",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Plantenrechten"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Plaveiselcel?",
+    "answer_nl": "plaveiselcel",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Plaveiselcel_(plant)"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Prasinodermophyta?",
+    "answer_nl": "prasinodermophyta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Prasinodermophyta"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Rhodelphis?",
+    "answer_nl": "rhodelphis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Rhodelphis"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Rotsplant?",
+    "answer_nl": "rotsplant",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Rotsplant"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Streptobionta?",
+    "answer_nl": "streptobionta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Streptobionta"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Streptophyta?",
+    "answer_nl": "streptophyta",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Streptophyta"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Teesdalia?",
+    "answer_nl": "teesdalia",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Teesdalia"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Vaatcryptogamen?",
+    "answer_nl": "vaatcryptogamen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vaatcryptogamen"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Viridiplantae?",
+    "answer_nl": "viridiplantae",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Viridiplantae"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Voedselweb?",
+    "answer_nl": "voedselweb",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Voedselweb"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Winterrust?",
+    "answer_nl": "winterrust",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Winterrust"
+  },
+  {
+    "category": "biologie",
+    "question_nl": "Wat is Yucca gigantea?",
+    "answer_nl": "yucca",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Yucca_gigantea"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Landen?",
+    "answer_nl": "landen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Landen_(Belgi%C3%AB)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Attenhoven?",
+    "answer_nl": "attenhoven",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Attenhoven_(Landen)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is De Beemden?",
+    "answer_nl": "de",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/De_Beemden_(Landen)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Eliksem?",
+    "answer_nl": "eliksem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Eliksem"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Ezemaal?",
+    "answer_nl": "ezemaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ezemaal"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is FC Landen?",
+    "answer_nl": "fc",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/FC_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Laar?",
+    "answer_nl": "laar",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Laar_(Landen)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Neerlanden?",
+    "answer_nl": "neerlanden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neerlanden"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Neerwinden?",
+    "answer_nl": "neerwinden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Neerwinden"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Overwinden?",
+    "answer_nl": "overwinden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Overwinden"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Pepijn van Landen?",
+    "answer_nl": "pepijn",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pepijn_van_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Plattetombe?",
+    "answer_nl": "plattetombe",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Plattetombe"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Rally van Haspengouw?",
+    "answer_nl": "rally",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Rally_van_Haspengouw"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Rumsdorp?",
+    "answer_nl": "rumsdorp",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Rumsdorp"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Slag bij Neerwinden?",
+    "answer_nl": "slag",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Slag_bij_Neerwinden_(1693)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Slag bij Neerwinden?",
+    "answer_nl": "slag",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Slag_bij_Neerwinden_(1793)"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Station Attenhoven?",
+    "answer_nl": "station",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Station_Attenhoven"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Station Ezemaal?",
+    "answer_nl": "station",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Station_Ezemaal"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Station Landen?",
+    "answer_nl": "station",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Station_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Station Neerwinden?",
+    "answer_nl": "station",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Station_Neerwinden"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Vlag van Landen?",
+    "answer_nl": "vlag",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vlag_van_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Waasmont?",
+    "answer_nl": "waasmont",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Waasmont"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Walsbets?",
+    "answer_nl": "walsbets",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Walsbets"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Walshoutem?",
+    "answer_nl": "walshoutem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Walshoutem"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Wange?",
+    "answer_nl": "wange",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wange"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Wapen van Landen?",
+    "answer_nl": "wapen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wapen_van_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Watertoren van Landen?",
+    "answer_nl": "watertoren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Watertoren_van_Landen"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Wezeren?",
+    "answer_nl": "wezeren",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Wezeren"
+  },
+  {
+    "category": "aardrijkskunde",
+    "question_nl": "Wat is Zevenbronnenbeek?",
+    "answer_nl": "zevenbronnenbeek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zevenbronnenbeek"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Natuurkunde?",
+    "answer_nl": "natuurkunde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Natuurkunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Experimentele natuurkunde?",
+    "answer_nl": "experimentele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Experimentele_natuurkunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Klassieke natuurkunde?",
+    "answer_nl": "klassieke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Klassieke_natuurkunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Aanvangsstabiliteit?",
+    "answer_nl": "aanvangsstabiliteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aanvangsstabiliteit"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Absorptielijn?",
+    "answer_nl": "absorptielijn",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Absorptielijn"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Absorptiespectrum?",
+    "answer_nl": "absorptiespectrum",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Absorptiespectrum"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Actie?",
+    "answer_nl": "actie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Actie_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Aerodynamica?",
+    "answer_nl": "aerodynamica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aerodynamica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Afstoting?",
+    "answer_nl": "afstoting",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Afstoting_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Akoestische levitatie?",
+    "answer_nl": "akoestische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Akoestische_levitatie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Amplitude?",
+    "answer_nl": "amplitude",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Amplitude"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Antizwaartekracht?",
+    "answer_nl": "antizwaartekracht",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Antizwaartekracht"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is ARCNL?",
+    "answer_nl": "arcnl",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/ARCNL"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Atoom?",
+    "answer_nl": "atoom",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Atoom"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Autosifon?",
+    "answer_nl": "autosifon",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Autosifon"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Ballon?",
+    "answer_nl": "ballon",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ballon_(gas)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is De beghinselen der weeghconst?",
+    "answer_nl": "de",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/De_beghinselen_der_weeghconst"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Beker der rechtvaardigheid?",
+    "answer_nl": "beker",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Beker_der_rechtvaardigheid"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Bellenvat?",
+    "answer_nl": "bellenvat",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bellenvat"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Betatronvoorwaarde?",
+    "answer_nl": "betatronvoorwaarde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Betatronvoorwaarde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Bevochtigen?",
+    "answer_nl": "bevochtigen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bevochtigen"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Beweging?",
+    "answer_nl": "beweging",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Beweging_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Blote oog?",
+    "answer_nl": "blote",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Blote_oog"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Bondgraaf?",
+    "answer_nl": "bondgraaf",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bondgraaf"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Bouwfysica?",
+    "answer_nl": "bouwfysica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bouwfysica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Brillouinzone?",
+    "answer_nl": "brillouinzone",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Brillouinzone"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Brownse beweging?",
+    "answer_nl": "brownse",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Brownse_beweging_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Buckingham-π-theorema?",
+    "answer_nl": "buckingham-π-theorema",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Buckingham-%CF%80-theorema"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Celsius?",
+    "answer_nl": "celsius",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Celsius"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Centrale kracht?",
+    "answer_nl": "centrale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Centrale_kracht"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Coherentie?",
+    "answer_nl": "coherentie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Coherentie_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Coïncidentie?",
+    "answer_nl": "coïncidentie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Co%C3%AFncidentie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Compton-effect?",
+    "answer_nl": "compton-effect",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Compton-effect"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Contacthoek?",
+    "answer_nl": "contacthoek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Contacthoek"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Contiguïteit?",
+    "answer_nl": "contiguïteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Contigu%C3%AFteit"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Continu spectrum?",
+    "answer_nl": "continu",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Continu_spectrum"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Continuïteitsvergelijking?",
+    "answer_nl": "continuïteitsvergelijking",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Continu%C3%AFteitsvergelijking"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Continuïteitswet?",
+    "answer_nl": "continuïteitswet",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Continu%C3%AFteitswet"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Continuüm?",
+    "answer_nl": "continuüm",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Continu%C3%BCm_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is CRC Handbook of Chemistry and Physics?",
+    "answer_nl": "crc",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/CRC_Handbook_of_Chemistry_and_Physics"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Cryogeen?",
+    "answer_nl": "cryogeen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Cryogeen"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Deeltje?",
+    "answer_nl": "deeltje",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Deeltje"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Deeltjesfysica?",
+    "answer_nl": "deeltjesfysica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Deeltjesfysica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Deeltjessnelheid?",
+    "answer_nl": "deeltjessnelheid",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Deeltjessnelheid"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Demping?",
+    "answer_nl": "demping",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Demping"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Detectie?",
+    "answer_nl": "detectie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Detectie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Deutsche Physikalische Gesellschaft?",
+    "answer_nl": "deutsche",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Deutsche_Physikalische_Gesellschaft"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dichtheidsgradiënt?",
+    "answer_nl": "dichtheidsgradiënt",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dichtheidsgradi%C3%ABnt"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Diëlektroforese?",
+    "answer_nl": "diëlektroforese",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Di%C3%ABlektroforese"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dimensie?",
+    "answer_nl": "dimensie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dimensie_(algemeen)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dimensie van een grootheid?",
+    "answer_nl": "dimensie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dimensie_van_een_grootheid"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dispersie?",
+    "answer_nl": "dispersie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dispersie_(mengsel)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dode tijd?",
+    "answer_nl": "dode",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dode_tijd"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is DPAD?",
+    "answer_nl": "dpad",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/DPAD"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dradenkamer?",
+    "answer_nl": "dradenkamer",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dradenkamer"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Druk?",
+    "answer_nl": "druk",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Druk_(grootheid)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Drukgradiënt?",
+    "answer_nl": "drukgradiënt",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Drukgradi%C3%ABnt"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dubbele slinger?",
+    "answer_nl": "dubbele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dubbele_slinger"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Dynamiek?",
+    "answer_nl": "dynamiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dynamiek_(beweging)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Econofysica?",
+    "answer_nl": "econofysica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Econofysica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Elektroakoestiek?",
+    "answer_nl": "elektroakoestiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Elektroakoestiek"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Elektrodialyse?",
+    "answer_nl": "elektrodialyse",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Elektrodialyse"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Elektrogradiënt?",
+    "answer_nl": "elektrogradiënt",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Elektrogradi%C3%ABnt"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Elektromotorische spanning?",
+    "answer_nl": "elektromotorische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Elektromotorische_spanning"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Emissie?",
+    "answer_nl": "emissie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Emissie_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Emissielijn?",
+    "answer_nl": "emissielijn",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Emissielijn"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Emissiespectroscopie?",
+    "answer_nl": "emissiespectroscopie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Emissiespectroscopie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Energetica?",
+    "answer_nl": "energetica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Energetica_(natuurwetenschap)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Energie-impuls-tensor?",
+    "answer_nl": "energie-impuls-tensor",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Energie-impuls-tensor"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Eötvös-effect?",
+    "answer_nl": "eötvös-effect",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/E%C3%B6tv%C3%B6s-effect"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Equipotentiaalvlak?",
+    "answer_nl": "equipotentiaalvlak",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Equipotentiaalvlak"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Equivalentieprincipe?",
+    "answer_nl": "equivalentieprincipe",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Equivalentieprincipe"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Errorfunctie?",
+    "answer_nl": "errorfunctie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Errorfunctie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Ether?",
+    "answer_nl": "ether",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Ether_(medium)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is European Physical Society?",
+    "answer_nl": "european",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/European_Physical_Society"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Evenwicht?",
+    "answer_nl": "evenwicht",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Evenwicht"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Excitatie-energie?",
+    "answer_nl": "excitatie-energie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Excitatie-energie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Exciton?",
+    "answer_nl": "exciton",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Exciton"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Explosieve decompressie?",
+    "answer_nl": "explosieve",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Explosieve_decompressie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fase?",
+    "answer_nl": "fase",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fase_(golf)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Faseaansnijding?",
+    "answer_nl": "faseaansnijding",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Faseaansnijding"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Faseverschuiving?",
+    "answer_nl": "faseverschuiving",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Faseverschuiving"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fasor?",
+    "answer_nl": "fasor",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fasor"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Feynmandiagram?",
+    "answer_nl": "feynmandiagram",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Feynmandiagram"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fluorescentiescherm?",
+    "answer_nl": "fluorescentiescherm",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fluorescentiescherm"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Foton?",
+    "answer_nl": "foton",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Foton"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Frequentieband?",
+    "answer_nl": "frequentieband",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Frequentieband"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Frequentiemodulatie?",
+    "answer_nl": "frequentiemodulatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Frequentiemodulatie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Frequentiespectrum?",
+    "answer_nl": "frequentiespectrum",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Frequentiespectrum"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Futiliteit?",
+    "answer_nl": "futiliteit",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Futiliteit"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fysicus?",
+    "answer_nl": "fysicus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fysicus"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fysische kosmologie?",
+    "answer_nl": "fysische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fysische_kosmologie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fysische modelvorming?",
+    "answer_nl": "fysische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fysische_modelvorming"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fysische techniek?",
+    "answer_nl": "fysische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fysische_techniek"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Fysische transportverschijnselen?",
+    "answer_nl": "fysische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Fysische_transportverschijnselen"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is G-kracht?",
+    "answer_nl": "g-kracht",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/G-kracht"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gas?",
+    "answer_nl": "gas",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gas_(aggregatietoestand)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gasontlading?",
+    "answer_nl": "gasontlading",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gasontlading"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gecondenseerde materie?",
+    "answer_nl": "gecondenseerde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gecondenseerde_materie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is GEO600?",
+    "answer_nl": "geo600",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/GEO600"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Geofysica?",
+    "answer_nl": "geofysica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geofysica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Geometrische optica?",
+    "answer_nl": "geometrische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geometrische_optica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Geschiedenis van de natuurkunde?",
+    "answer_nl": "geschiedenis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geschiedenis_van_de_natuurkunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gesloten tijdachtige kromme?",
+    "answer_nl": "gesloten",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gesloten_tijdachtige_kromme"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gewicht?",
+    "answer_nl": "gewicht",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gewicht"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gewichtloosheid?",
+    "answer_nl": "gewichtloosheid",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gewichtloosheid"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gloeien?",
+    "answer_nl": "gloeien",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gloeien_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Golfvector?",
+    "answer_nl": "golfvector",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Golfvector"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Golfvergelijking?",
+    "answer_nl": "golfvergelijking",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Golfvergelijking"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Golfvorm?",
+    "answer_nl": "golfvorm",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Golfvorm"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gravity Probe B?",
+    "answer_nl": "gravity",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gravity_Probe_B"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Grenswaarde?",
+    "answer_nl": "grenswaarde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Grenswaarde_(natuurkunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Grondeffect?",
+    "answer_nl": "grondeffect",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Grondeffect"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Grondtoestand?",
+    "answer_nl": "grondtoestand",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Grondtoestand"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Halfgeleider?",
+    "answer_nl": "halfgeleider",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Halfgeleider_(elektronica)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Scheikunde?",
+    "answer_nl": "scheikunde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Scheikunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Geschiedenis van de scheikunde?",
+    "answer_nl": "geschiedenis",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geschiedenis_van_de_scheikunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Advectie?",
+    "answer_nl": "advectie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Advectie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Astrochemie?",
+    "answer_nl": "astrochemie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Astrochemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Atmosfeerchemie?",
+    "answer_nl": "atmosfeerchemie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Atmosfeerchemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemica?",
+    "answer_nl": "chemica",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemical Markup Language?",
+    "answer_nl": "chemical",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemical_Markup_Language"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemicus?",
+    "answer_nl": "chemicus",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemicus"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemische technologie?",
+    "answer_nl": "chemische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemische_technologie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemische thermodynamica?",
+    "answer_nl": "chemische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemische_thermodynamica"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Chemurgie?",
+    "answer_nl": "chemurgie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Chemurgie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Component?",
+    "answer_nl": "component",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Component_(scheikunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Corpuscularianisme?",
+    "answer_nl": "corpuscularianisme",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Corpuscularianisme"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is De novo?",
+    "answer_nl": "de",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/De_novo"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is European Chemical Society?",
+    "answer_nl": "european",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/European_Chemical_Society"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is European Young Chemists' Network?",
+    "answer_nl": "european",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/European_Young_Chemists'_Network"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Filosofie van de chemie?",
+    "answer_nl": "filosofie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Filosofie_van_de_chemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Gouden KNCV-Medaille?",
+    "answer_nl": "gouden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Gouden_KNCV-Medaille"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Groene chemie?",
+    "answer_nl": "groene",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Groene_chemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Internationaal Instituut voor Fysica en?",
+    "answer_nl": "internationaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Internationaal_Instituut_voor_Fysica_en_Chemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Internationale Unie voor Zuivere en Toeg?",
+    "answer_nl": "internationale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Unie_voor_Zuivere_en_Toegepaste_Scheikunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is IUPAC?",
+    "answer_nl": "iupac",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/IUPAC"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Koninklijke Nederlandse Chemische Vereni?",
+    "answer_nl": "koninklijke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Koninklijke_Nederlandse_Chemische_Vereniging"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Koninklijke Vlaamse Chemische Vereniging?",
+    "answer_nl": "koninklijke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Koninklijke_Vlaamse_Chemische_Vereniging"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Kwantitatieve bepaling?",
+    "answer_nl": "kwantitatieve",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kwantitatieve_bepaling"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Lab-on-a-chip?",
+    "answer_nl": "lab-on-a-chip",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lab-on-a-chip"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Leiden Papyrus X?",
+    "answer_nl": "leiden",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leiden_Papyrus_X"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Nobelprijs voor Scheikunde?",
+    "answer_nl": "nobelprijs",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Nobelprijs_voor_Scheikunde"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Petrochemie?",
+    "answer_nl": "petrochemie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Petrochemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Pyro?",
+    "answer_nl": "pyro",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Pyro_(scheikunde)"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Royal Society of Chemistry?",
+    "answer_nl": "royal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Royal_Society_of_Chemistry"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is SQuiz Chemie?",
+    "answer_nl": "squiz",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/SQuiz_Chemie"
+  },
+  {
+    "category": "algemeen",
+    "question_nl": "Wat is Watervrij?",
+    "answer_nl": "watervrij",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Watervrij"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taal?",
+    "answer_nl": "taal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Aanvankelijk lezen en spellen?",
+    "answer_nl": "aanvankelijk",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Aanvankelijk_lezen_en_spellen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Acrofonie?",
+    "answer_nl": "acrofonie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Acrofonie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Analogie?",
+    "answer_nl": "analogie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Analogie_(taalkunde)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Arabistiek?",
+    "answer_nl": "arabistiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Arabistiek"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Bedreigde taal?",
+    "answer_nl": "bedreigde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bedreigde_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Bedrijfsverbindingsteken?",
+    "answer_nl": "bedrijfsverbindingsteken",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bedrijfsverbindingsteken"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Beschouwing?",
+    "answer_nl": "beschouwing",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Beschouwing_(argumentatieleer)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Betoog?",
+    "answer_nl": "betoog",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Betoog"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Blank en wit in het racismedebat?",
+    "answer_nl": "blank",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Blank_en_wit_in_het_racismedebat"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Bronnentaal?",
+    "answer_nl": "bronnentaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Bronnentaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Contacttalen?",
+    "answer_nl": "contacttalen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Contacttalen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Context?",
+    "answer_nl": "context",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Context_(taal)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Creatief schrijven?",
+    "answer_nl": "creatief",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Creatief_schrijven"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Diasysteem?",
+    "answer_nl": "diasysteem",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Diasysteem"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Dictee?",
+    "answer_nl": "dictee",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Dictee"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Donaat?",
+    "answer_nl": "donaat",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Donaat"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Donortaal?",
+    "answer_nl": "donortaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Donortaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Eigennaam?",
+    "answer_nl": "eigennaam",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Eigennaam"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Otto's encyclopedie?",
+    "answer_nl": "otto's",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Otto's_encyclopedie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Etymologie?",
+    "answer_nl": "etymologie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Etymologie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Geschreven taal?",
+    "answer_nl": "geschreven",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Geschreven_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Glossolalie?",
+    "answer_nl": "glossolalie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Glossolalie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Grammaticacontrole?",
+    "answer_nl": "grammaticacontrole",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Grammaticacontrole"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Hunspell?",
+    "answer_nl": "hunspell",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Hunspell"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Inclusief taalgebruik?",
+    "answer_nl": "inclusief",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Inclusief_taalgebruik"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Inclusieve communicatie?",
+    "answer_nl": "inclusieve",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Inclusieve_communicatie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Internationale Moedertaaldag?",
+    "answer_nl": "internationale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Internationale_Moedertaaldag"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Isogram?",
+    "answer_nl": "isogram",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Isogram"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Jip-en-janneketaal?",
+    "answer_nl": "jip-en-janneketaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Jip-en-janneketaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Kanker?",
+    "answer_nl": "kanker",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Kanker"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Klassieke talen?",
+    "answer_nl": "klassieke",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Klassieke_talen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Language Proficiency Exam?",
+    "answer_nl": "language",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Language_Proficiency_Exam"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Leemte in de taal?",
+    "answer_nl": "leemte",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Leemte_in_de_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Levende taal?",
+    "answer_nl": "levende",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Levende_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Levende talen?",
+    "answer_nl": "levende",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Levende_talen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Lexicale verwerking?",
+    "answer_nl": "lexicale",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lexicale_verwerking"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Lichaamstaal?",
+    "answer_nl": "lichaamstaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lichaamstaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Liet International?",
+    "answer_nl": "liet",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Liet_International"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Lingua franca?",
+    "answer_nl": "lingua",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lingua_franca"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Lingua receptiva?",
+    "answer_nl": "lingua",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Lingua_receptiva"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Logisch leren lezen en spellen?",
+    "answer_nl": "logisch",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Logisch_leren_lezen_en_spellen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Mamihlapinatapai?",
+    "answer_nl": "mamihlapinatapai",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mamihlapinatapai"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Marginalisatie?",
+    "answer_nl": "marginalisatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Marginalisatie_(taalkunde)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Meertalige woordspeling?",
+    "answer_nl": "meertalige",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Meertalige_woordspeling"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Mengtaal?",
+    "answer_nl": "mengtaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mengtaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Metafoor?",
+    "answer_nl": "metafoor",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Metafoor"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Minderheidstaal?",
+    "answer_nl": "minderheidstaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Minderheidstaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Mithridates?",
+    "answer_nl": "mithridates",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Mithridates_(taalcatalogus)_van_Conrad_Gessner"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Moedertaal?",
+    "answer_nl": "moedertaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Moedertaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Moedertaalspreker?",
+    "answer_nl": "moedertaalspreker",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Moedertaalspreker"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Officiële taal?",
+    "answer_nl": "officiële",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Offici%C3%ABle_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Officiële talen van de Verenigde Naties?",
+    "answer_nl": "officiële",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Offici%C3%ABle_talen_van_de_Verenigde_Naties"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Onparlementair taalgebruik?",
+    "answer_nl": "onparlementair",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Onparlementair_taalgebruik"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Persoon-eerst-taalgebruik?",
+    "answer_nl": "persoon-eerst-taalgebruik",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Persoon-eerst-taalgebruik"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Postlinguaal?",
+    "answer_nl": "postlinguaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Postlinguaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Prelinguaal?",
+    "answer_nl": "prelinguaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Prelinguaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Schrift?",
+    "answer_nl": "schrift",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Schrift"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Schrijven?",
+    "answer_nl": "schrijven",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Schrijven"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Smalltalk?",
+    "answer_nl": "smalltalk",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Smalltalk_(taal)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Snellezen?",
+    "answer_nl": "snellezen",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Snellezen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Spraak?",
+    "answer_nl": "spraak",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spraak"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Spraakafzien?",
+    "answer_nl": "spraakafzien",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spraakafzien"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Sprachbund?",
+    "answer_nl": "sprachbund",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Sprachbund"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Spreektaal?",
+    "answer_nl": "spreektaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Spreektaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Standaardtaal?",
+    "answer_nl": "standaardtaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Standaardtaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Substandaard?",
+    "answer_nl": "substandaard",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Substandaard"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taal- en spraaktechnologie?",
+    "answer_nl": "taal-",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taal-_en_spraaktechnologie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalactivisme?",
+    "answer_nl": "taalactivisme",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalactivisme"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taaladviseur?",
+    "answer_nl": "taaladviseur",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taaladviseur"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalcoach?",
+    "answer_nl": "taalcoach",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalcoach"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taaldidactiek?",
+    "answer_nl": "taaldidactiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taaldidactiek"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taaldood?",
+    "answer_nl": "taaldood",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taaldood"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalfamilie?",
+    "answer_nl": "taalfamilie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalfamilie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalgevoel?",
+    "answer_nl": "taalgevoel",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalgevoel"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalgids?",
+    "answer_nl": "taalgids",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalgids"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalgrens?",
+    "answer_nl": "taalgrens",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalgrens"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalniveau?",
+    "answer_nl": "taalniveau",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalniveau"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalpolitiek?",
+    "answer_nl": "taalpolitiek",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalpolitiek"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalrevitalisatie?",
+    "answer_nl": "taalrevitalisatie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalrevitalisatie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalstrijd?",
+    "answer_nl": "taalstrijd",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalstrijd"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalverwerving?",
+    "answer_nl": "taalverwerving",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalverwerving"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Taalvlag?",
+    "answer_nl": "taalvlag",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Taalvlag"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Turbotaal?",
+    "answer_nl": "turbotaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Turbotaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Uiteenzetting?",
+    "answer_nl": "uiteenzetting",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Uiteenzetting"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is UNESCO-wereldatlas van bedreigde talen?",
+    "answer_nl": "unesco-wereldatlas",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/UNESCO-wereldatlas_van_bedreigde_talen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Veilig leren lezen?",
+    "answer_nl": "veilig",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Veilig_leren_lezen"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Verbeulemansing?",
+    "answer_nl": "verbeulemansing",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Verbeulemansing"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Verbum dicendi?",
+    "answer_nl": "verbum",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Verbum_dicendi"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Vergelijkend verband?",
+    "answer_nl": "vergelijkend",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vergelijkend_verband"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Versteende taalvorm?",
+    "answer_nl": "versteende",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Versteende_taalvorm"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Visuele analyse?",
+    "answer_nl": "visuele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Visuele_analyse_(lezen)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Visuele discriminatie?",
+    "answer_nl": "visuele",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Visuele_discriminatie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Voertaal?",
+    "answer_nl": "voertaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Voertaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Alfabetische volgorde?",
+    "answer_nl": "alfabetische",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Alfabetische_volgorde"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Volkstaal?",
+    "answer_nl": "volkstaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Volkstaal_(moedertaal)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Volkstaal?",
+    "answer_nl": "volkstaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Volkstaal_(register)"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Vreemde taal?",
+    "answer_nl": "vreemde",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Vreemde_taal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Werktaal?",
+    "answer_nl": "werktaal",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Werktaal"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Woordbeeld?",
+    "answer_nl": "woordbeeld",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Woordbeeld"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Woordketting?",
+    "answer_nl": "woordketting",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Woordketting"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Xenoglossie?",
+    "answer_nl": "xenoglossie",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Xenoglossie"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Zelfvervuller?",
+    "answer_nl": "zelfvervuller",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zelfvervuller"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Zwartschrift?",
+    "answer_nl": "zwartschrift",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zwartschrift"
+  },
+  {
+    "category": "taal",
+    "question_nl": "Wat is Zwerfwoord?",
+    "answer_nl": "zwerfwoord",
+    "difficulty": 1,
+    "source_url": "https://nl.wikipedia.org/wiki/Zwerfwoord"
+  }
+]

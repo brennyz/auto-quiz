@@ -21,10 +21,15 @@
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, var(--accent-glow), transparent),
-    linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+    linear-gradient(rgba(15, 15, 26, 0.75), rgba(15, 15, 26, 0.82)),
+    url('bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text);
   font-family: var(--font);
   display: flex;
@@ -32,6 +37,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 #app {
@@ -62,13 +73,25 @@ body {
   font-weight: 600;
 }
 
+.progress {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.progress[hidden] {
+  display: none;
+}
+
 .main {
   min-height: 300px;
-  background: var(--bg-card);
+  background: rgba(15, 15, 26, 0.92);
   border-radius: 24px;
   padding: 1.5rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(244, 114, 182, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .screen {
@@ -95,6 +118,8 @@ body {
 
 .btn {
   padding: 1rem 2rem;
+  min-height: 48px;
+  min-width: 44px;
   font-size: 1.05rem;
   font-weight: 700;
   font-family: var(--font);
@@ -170,9 +195,18 @@ body {
   animation: pulse 0.5s ease;
 }
 
+.countdown.listening {
+  animation: listening-pulse 1.2s ease-in-out infinite;
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes listening-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
 }
 
 .hint {

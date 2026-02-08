@@ -1,9 +1,9 @@
-const CACHE = 'auto-quiz-v1';
+const CACHE = 'auto-quiz-v2';
 
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return cache.addAll(['index.html', 'styles.css', 'app.js', 'manifest.json', 'env.js']);
+      return cache.addAll(['index.html', 'styles.css', 'app.js', 'manifest.json', 'bg.png', 'data/questions.json']);
     }).then(function () { return self.skipWaiting(); })
   );
 });
@@ -19,7 +19,7 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
-  if (e.request.url.includes('supabase') || e.request.method !== 'GET') return;
+  if (e.request.method !== 'GET') return;
   e.respondWith(
     caches.match(e.request).then(function (r) {
       return r || fetch(e.request);

@@ -8,19 +8,22 @@
   <title>Auto-Quiz</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="sounds/wait-music.wav" as="fetch" />
+  <link rel="preload" href="sounds/countdown.mp3" as="audio" />
 </head>
 <body>
   <div id="app">
     <header class="header">
       <h1>Auto-Quiz</h1>
       <p class="subtitle">Klas 1 — Dieren, wiskunde, biologie & meer</p>
+      <p class="progress" id="progress-text" aria-live="polite" hidden></p>
     </header>
 
     <main class="main">
       <!-- Startscherm -->
       <section id="screen-start" class="screen active">
         <p class="instruction">Druk op start en sta microfoon toe. De vraag wordt voorgelezen, daarna klinkt de countdown (3, 2, 1, go) — dan antwoord je hardop.</p>
-        <button id="btn-start" class="btn btn-primary">Start quiz</button>
+        <button id="btn-start" class="btn btn-primary" type="button" aria-label="Start de quiz">Start quiz</button>
       </section>
 
       <!-- Wachtmuziek + laden -->
@@ -33,26 +36,26 @@
       <section id="screen-question" class="screen">
         <p id="question-text" class="question-text"></p>
         <div id="countdown" class="countdown" aria-live="polite"></div>
-        <p class="hint">Na “3, 2, 1, go” antwoord je hardop. Er speelt wachtmuziek tot je antwoordt.</p>
+        <p class="hint">Na “3, 2, 1, go” antwoord je hardop. Wachtmuziek speelt als ondersteuning.</p>
       </section>
 
       <!-- Feedback -->
       <section id="screen-feedback" class="screen">
         <p id="feedback-result" class="feedback-result"></p>
         <p id="feedback-answer" class="feedback-answer"></p>
-        <button id="btn-next" class="btn btn-secondary">Volgende</button>
+        <button id="btn-next" class="btn btn-secondary" type="button" aria-label="Volgende vraag">Volgende</button>
       </section>
 
       <!-- Einde ronde -->
       <section id="screen-end" class="screen">
         <h2>Ronde afgerond</h2>
         <p id="score-text" class="score-text"></p>
-        <button id="btn-restart" class="btn btn-primary">Opnieuw</button>
+        <button id="btn-restart" class="btn btn-primary" type="button" aria-label="Nog een ronde">Opnieuw</button>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Vragen uit Supabase · TTS via auto-speakers</p>
+      <p>Quiz in de auto · TTS via auto-speakers</p>
     </footer>
   </div>
 
@@ -62,9 +65,6 @@
     <source src="sounds/countdown.mp3" type="audio/mpeg" />
   </audio>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>window.ENV = window.ENV || { SUPABASE_URL: '', SUPABASE_ANON_KEY: '' };</script>
-  <script src="env.js"></script>
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {

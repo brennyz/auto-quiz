@@ -1,15 +1,11 @@
 (function () {
   'use strict';
 
-  var SUPABASE_URL = window.ENV && window.ENV.SUPABASE_URL ? window.ENV.SUPABASE_URL : '';
-  var SUPABASE_ANON_KEY = window.ENV && window.ENV.SUPABASE_ANON_KEY ? window.ENV.SUPABASE_ANON_KEY : '';
   var appConfig = {
-    countdown_seconds: 4,
-    wait_music_enabled: true,
-    wait_music_segment_seconds: 20,
-    wait_music_fade_seconds: 1.5,
-    tts_speed: 0.9,
-    questions_per_round: 10
+    questions_per_round: 10,
+    wait_music_volume: 0.5,
+    wait_music_duck_volume: 0.12,
+    tts_speed: 0.9
   };
 
   var screens = {
@@ -27,23 +23,20 @@
   var feedbackResult = document.getElementById('feedback-result');
   var feedbackAnswer = document.getElementById('feedback-answer');
   var scoreText = document.getElementById('score-text');
+  var progressText = document.getElementById('progress-text');
   var audioCountdown = document.getElementById('audio-countdown');
 
-  var supabase = null;
   var questions = [];
   var currentIndex = 0;
   var score = 0;
-  var countdownTimer = null;
   var recognition = null;
   var micPermissionGranted = false;
 
-  // --- Wachtmuziek: Web Audio, 20s segmenten, fade-in/out ---
+  // --- Wachtmuziek: altijd aan, duck bij stem/countdown ---
   var audioCtx = null;
   var waitMusicBuffer = null;
   var waitMusicSource = null;
   var waitMusicGain = null;
-  var waitMusicFadeTimeout = null;
-  var waitMusicStopTimeout = null;
 
   function getAudioContext() {
     if (audioCtx) return audioCtx;
@@ -53,8 +46,15 @@
     return audioCtx;
   }
 
+  function resumeAudioContext() {
+    var ctx = getAudioContext();
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume().catch(function () {});
+    }
+  }
+
   function loadWaitMusic() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
       if (waitMusicBuffer) {
         resolve();
         return;
@@ -75,75 +75,53 @@
     });
   }
 
-  function playWaitMusicSegment() {
-    if (!appConfig.wait_music_enabled || !waitMusicBuffer) return;
+  function startWaitMusicContinuous() {
+    resumeAudioContext();
+    if (!waitMusicBuffer) return;
     var ctx = getAudioContext();
     if (!ctx) return;
-
     if (waitMusicSource) {
       try { waitMusicSource.stop(); } catch (e) {}
       waitMusicSource = null;
     }
-    if (waitMusicFadeTimeout) clearTimeout(waitMusicFadeTimeout);
-    if (waitMusicStopTimeout) clearTimeout(waitMusicStopTimeout);
-
-    var duration = waitMusicBuffer.duration;
-    var segmentLen = Math.min(appConfig.wait_music_segment_seconds || 20, duration - 1);
-    var maxStart = Math.max(0, duration - segmentLen - 0.5);
-    var startAt = maxStart > 0 ? Math.random() * maxStart : 0;
-    var fadeLen = Math.min(appConfig.wait_music_fade_seconds || 1.5, segmentLen / 4);
-
     var source = ctx.createBufferSource();
     source.buffer = waitMusicBuffer;
-    source.loop = false;
+    source.loop = true;
     var gain = ctx.createGain();
     gain.gain.setValueAtTime(0, ctx.currentTime);
     source.connect(gain);
     gain.connect(ctx.destination);
-
-    var startTime = ctx.currentTime;
-    source.start(startTime, startAt, startAt + segmentLen);
-
-    gain.gain.linearRampToValueAtTime(0.6, startTime + fadeLen);
-    gain.gain.setValueAtTime(0.6, startTime + fadeLen);
-    var fadeOutStart = startTime + segmentLen - fadeLen;
-    gain.gain.setValueAtTime(0.6, fadeOutStart);
-    gain.gain.linearRampToValueAtTime(0.01, startTime + segmentLen);
-
+    source.start(0);
+    gain.gain.linearRampToValueAtTime(appConfig.wait_music_volume || 0.5, ctx.currentTime + 0.8);
     waitMusicSource = source;
     waitMusicGain = gain;
-    waitMusicStopTimeout = setTimeout(function () {
-      waitMusicSource = null;
-      waitMusicGain = null;
-    }, (segmentLen + 0.5) * 1000);
+  }
+
+  function duckWaitMusic() {
+    if (!waitMusicGain) return;
+    var ctx = getAudioContext();
+    if (!ctx) return;
+    var now = ctx.currentTime;
+    waitMusicGain.gain.cancelScheduledValues(now);
+    waitMusicGain.gain.setValueAtTime(waitMusicGain.gain.value, now);
+    waitMusicGain.gain.linearRampToValueAtTime(appConfig.wait_music_duck_volume || 0.12, now + 0.2);
+  }
+
+  function restoreWaitMusic() {
+    if (!waitMusicGain) return;
+    var ctx = getAudioContext();
+    if (!ctx) return;
+    var now = ctx.currentTime;
+    waitMusicGain.gain.cancelScheduledValues(now);
+    waitMusicGain.gain.setValueAtTime(waitMusicGain.gain.value, now);
+    waitMusicGain.gain.linearRampToValueAtTime(appConfig.wait_music_volume || 0.5, now + 0.3);
   }
 
   function stopWaitMusic() {
-    if (waitMusicFadeTimeout) clearTimeout(waitMusicFadeTimeout);
-    if (waitMusicStopTimeout) clearTimeout(waitMusicStopTimeout);
-    waitMusicFadeTimeout = null;
-    waitMusicStopTimeout = null;
-    if (!waitMusicSource) {
-      waitMusicGain = null;
-      return;
-    }
-    var ctx = getAudioContext();
-    if (!ctx || !waitMusicGain) {
-      try { if (waitMusicSource) waitMusicSource.stop(); } catch (e) {}
-      waitMusicSource = null;
-      waitMusicGain = null;
-      return;
-    }
-    var now = ctx.currentTime;
-    waitMusicGain.gain.cancelScheduledValues(now);
-    waitMusicGain.gain.setValueAtTime(0.6, now);
-    waitMusicGain.gain.linearRampToValueAtTime(0.01, now + 0.8);
-    waitMusicFadeTimeout = setTimeout(function () {
-      try { if (waitMusicSource) waitMusicSource.stop(); } catch (e) {}
-      waitMusicSource = null;
-      waitMusicGain = null;
-      waitMusicFadeTimeout = null;
-    }, 900);
+    if (!waitMusicSource) return;
+    try { waitMusicSource.stop(); } catch (e) {}
+    waitMusicSource = null;
+    waitMusicGain = null;
   }
 
   function showScreen(id) {
@@ -164,6 +142,10 @@
       window.speechSynthesis.cancel();
       window.speechSynthesis.speak(u);
     });
+  }
+
+  function stopSpeaking() {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
   }
 
   function playCountdownAudio() {
@@ -206,8 +188,8 @@
     var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
     var r = new SR();
-    r.continuous = false;
-    r.interimResults = false;
+    r.continuous = true;
+    r.interimResults = true;
     r.lang = 'nl-NL';
     return r;
   }
@@ -216,36 +198,45 @@
     return new Promise(function (resolve) {
       if (!recognition) recognition = initSpeechRecognition();
       if (!recognition) {
-        setTimeout(function () { resolve(''); }, timeoutMs || 8000);
+        setTimeout(function () { resolve([]); }, timeoutMs || 8000);
         return;
       }
+      var collected = [];
       var resolved = false;
-      var done = function (text) {
+      var done = function () {
         if (resolved) return;
         resolved = true;
         try { recognition.stop(); } catch (e) {}
         try { recognition.abort(); } catch (e) {}
-        resolve((text || '').trim().toLowerCase());
+        resolve(collected);
       };
+      recognition.continuous = true;
+      recognition.interimResults = true;
       recognition.onresult = function (e) {
-        var t = e.results[e.results.length - 1][0].transcript;
-        done(t);
+        var i, r, t;
+        for (i = 0; i < e.results.length; i++) {
+          r = e.results[i];
+          if (r.isFinal && r.length > 0) {
+            t = (r[0].transcript || '').trim().toLowerCase();
+            if (t) collected.push(t);
+          }
+        }
       };
       recognition.onend = function () {
-        if (!resolved) done('');
+        if (!resolved) done();
       };
       recognition.onerror = function () {
-        if (!resolved) done('');
+        if (!resolved) done();
       };
       try {
         recognition.start();
       } catch (err) {
-        done('');
+        resolve([]);
         return;
       }
       setTimeout(function () {
-        if (!resolved) done('');
-      }, timeoutMs || 8000);
+        if (!resolved) done();
+      }, timeoutMs || 10000);
     });
   }
 
@@ -273,48 +264,17 @@
     return false;
   }
 
-  function loadConfig() {
-    if (!supabase) return Promise.resolve();
-    return supabase.from('app_config').select('key, value').then(function (r) {
-      if (r.data) {
-        r.data.forEach(function (row) {
-          var v = row.value;
-          if (row.key === 'countdown_seconds') appConfig.countdown_seconds = parseInt(v, 10) || 4;
-          else if (row.key === 'wait_music_enabled') appConfig.wait_music_enabled = v === true || v === 'true';
-          else if (row.key === 'tts_speed') appConfig.tts_speed = parseFloat(v) || 0.9;
-          else if (row.key === 'questions_per_round') appConfig.questions_per_round = parseInt(v, 10) || 10;
-        });
-      }
-    }).catch(function () {});
-  }
-
-  function loadQuestions() {
-    if (!supabase) {
-      questions = getFallbackQuestions();
-      return Promise.resolve();
-    }
-    var perRound = Math.min(appConfig.questions_per_round || 10, 50);
-    return supabase
-      .from('questions')
-      .select('id, question_nl, answer_nl, category')
-      .limit(500)
-      .then(function (r) {
-        if (r.data && r.data.length) {
-          questions = shuffle(r.data).slice(0, perRound);
-        } else {
-          questions = shuffle(getFallbackQuestions()).slice(0, perRound);
-        }
-      })
-      .catch(function () {
-        questions = shuffle(getFallbackQuestions()).slice(0, perRound);
-      });
-  }
-
-  function shuffle(arr) {
+  function cryptoShuffle(arr) {
     var a = arr.slice();
-    var i, j, t;
+    var i, j, t, tmp;
+    var buf = new Uint32Array(1);
     for (i = a.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
+      if (window.crypto && window.crypto.getRandomValues) {
+        window.crypto.getRandomValues(buf);
+        j = buf[0] % (i + 1);
+      } else {
+        j = Math.floor(Math.random() * (i + 1));
+      }
       t = a[i];
       a[i] = a[j];
       a[j] = t;
@@ -332,29 +292,50 @@
     ];
   }
 
+  function loadQuestions() {
+    return fetch('data/questions.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (data) {
+        var list = Array.isArray(data) ? data : (data.questions || data.items || []);
+        if (list.length === 0) return getFallbackQuestions();
+        var perRound = Math.min(appConfig.questions_per_round || 10, 50);
+        return cryptoShuffle(list).slice(0, perRound);
+      })
+      .catch(function () {
+        return cryptoShuffle(getFallbackQuestions()).slice(0, 10);
+      });
+  }
+
   function startQuiz() {
     showScreen('loading');
     countdownEl.textContent = '';
 
-    requestMicrophonePermission().then(function () {
-      return loadWaitMusic();
-    }).then(function () {
-      return loadConfig();
-    }).then(function () {
-      return loadQuestions();
-    }).then(function () {
-      if (!questions.length) questions = getFallbackQuestions();
-      currentIndex = 0;
-      score = 0;
-      showScreen('question');
-      nextQuestion();
-    }).catch(function () {
-      questions = getFallbackQuestions();
-      currentIndex = 0;
-      score = 0;
-      showScreen('question');
-      nextQuestion();
-    });
+    requestMicrophonePermission()
+      .then(function () { return loadWaitMusic(); })
+      .then(function () { return loadQuestions(); })
+      .then(function (q) {
+        questions = q;
+        if (!questions.length) questions = cryptoShuffle(getFallbackQuestions()).slice(0, 10);
+        currentIndex = 0;
+        score = 0;
+        startWaitMusicContinuous();
+        showScreen('question');
+        nextQuestion();
+      })
+      .catch(function () {
+        questions = cryptoShuffle(getFallbackQuestions()).slice(0, 10);
+        currentIndex = 0;
+        score = 0;
+        startWaitMusicContinuous();
+        showScreen('question');
+        nextQuestion();
+      });
+  }
+
+  function updateProgress() {
+    if (!progressText) return;
+    progressText.textContent = 'Vraag ' + (currentIndex + 1) + ' van ' + questions.length + ' · Score: ' + score;
+    progressText.hidden = false;
   }
 
   function nextQuestion() {
@@ -363,52 +344,90 @@
       endRound();
       return;
     }
+    updateProgress();
     var q = questions[currentIndex];
     questionText.textContent = q.question_nl;
     countdownEl.textContent = '';
 
+    duckWaitMusic();
     speak(q.question_nl).then(function () {
       countdownEl.textContent = '3… 2… 1…';
       return playCountdownAudio();
     }).then(function () {
+      restoreWaitMusic();
       countdownEl.textContent = 'Antwoord!';
-      playWaitMusicSegment();
-      listenForAnswer(10000).then(function (userAnswer) {
-        stopWaitMusic();
-        var correct = isCorrect(userAnswer, q.answer_nl);
-        if (correct) score++;
-        showFeedback(correct, q.answer_nl);
+      countdownEl.setAttribute('aria-live', 'polite');
+      if (countdownEl.classList) countdownEl.classList.add('listening');
+      var listeningLabel = setTimeout(function () {
+        countdownEl.textContent = 'Luisteren…';
+      }, 1500);
+      listenForAnswer(10000).then(function (answers) {
+        clearTimeout(listeningLabel);
+        countdownEl.classList.remove('listening');
+        countdownEl.textContent = '';
+        var someoneCorrect = false;
+        var i;
+        if (Array.isArray(answers) && answers.length > 0) {
+          for (i = 0; i < answers.length; i++) {
+            if (isCorrect(answers[i], q.answer_nl)) {
+              someoneCorrect = true;
+              break;
+            }
+          }
+        }
+        if (someoneCorrect) score++;
+        showFeedback(someoneCorrect, q.answer_nl, answers.length);
       });
     });
   }
 
-  function showFeedback(correct, answer) {
+  function showFeedback(someoneCorrect, answer, answerCount) {
+    duckWaitMusic();
     showScreen('feedback');
-    feedbackResult.textContent = correct ? '\u2705 Goed!' : '\u274C Helaas';
-    feedbackResult.className = 'feedback-result ' + (correct ? 'correct' : 'incorrect');
-    feedbackAnswer.textContent = 'Het antwoord was: ' + answer;
-    speak(correct ? 'Goed. Het antwoord was ' + answer : 'Helaas. Het antwoord was ' + answer).then(function () {});
+    updateProgress();
+    if (btnNext && btnNext.focus) setTimeout(function () { btnNext.focus(); }, 100);
+    var ttsText;
+    if (someoneCorrect) {
+      feedbackResult.textContent = '\u2705 Iemand had het goed!';
+      feedbackResult.className = 'feedback-result correct';
+      feedbackAnswer.textContent = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.';
+      ttsText = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.';
+    } else {
+      feedbackResult.textContent = '\u274C Niemand had het goed';
+      feedbackResult.className = 'feedback-result incorrect';
+      if (answerCount === 0) {
+        feedbackAnswer.textContent = 'We hoorden geen antwoord. Het is namelijk ' + answer + '.';
+        ttsText = 'We hoorden geen antwoord. Het is namelijk ' + answer + '.';
+      } else {
+        feedbackAnswer.textContent = 'Niemand had het juiste antwoord. Het is namelijk ' + answer + '.';
+        ttsText = 'Niemand had het juiste antwoord. Het is namelijk ' + answer + '.';
+      }
+    }
+    speak(ttsText).then(function () {
+      restoreWaitMusic();
+    });
   }
 
   function toNext() {
+    stopSpeaking();
     currentIndex++;
     showScreen('question');
     nextQuestion();
   }
 
   function endRound() {
+    if (progressText) progressText.hidden = true;
     showScreen('end');
     scoreText.textContent = 'Je had ' + score + ' van de ' + questions.length + ' goed.';
     speak('Ronde afgerond. Je had ' + score + ' van de ' + questions.length + ' goed.');
+    if (btnRestart && btnRestart.focus) setTimeout(function () { btnRestart.focus(); }, 100);
   }
 
   function init() {
-    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-      supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    }
     btnStart.addEventListener('click', startQuiz);
     btnNext.addEventListener('click', toNext);
     btnRestart.addEventListener('click', function () {
+      if (progressText) progressText.hidden = true;
       showScreen('start');
     });
   }

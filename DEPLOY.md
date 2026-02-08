@@ -1,6 +1,14 @@
 # Snel online: Netlify + GitHub
 
-Git is al geïnitialiseerd in dit project. Als je nog nooit git config hebt gedaan:
+**Live site:** https://car-quiz-pwa.netlify.app  
+**GitHub repo:** https://github.com/brennyz/auto-quiz
+
+De map is gekoppeld aan Netlify. Na wijzigingen: `npx netlify deploy --prod --dir=public`  
+Of: push naar GitHub en zet in Netlify **Build & deploy** → **Continuous deployment** aan (koppel de repo).
+
+---
+
+Git config is lokaal gezet (alleen voor deze map). Als je globaal wilt instellen:
 
 ```powershell
 git config --global user.email "jouw@email.nl"
