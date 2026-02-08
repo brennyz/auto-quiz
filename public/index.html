@@ -18,8 +18,18 @@
     </header>
 
     <main class="main">
+      <!-- Unlock (tijdelijk: cijfer onder 1000) -->
+      <section id="screen-unlock" class="screen">
+        <p class="unlock-question">Welk cijfer onder de 1000 is het?</p>
+        <form id="unlock-form" class="unlock-form">
+          <input id="unlock-input" type="number" min="0" max="999" placeholder="Cijfer" aria-label="Voer cijfer in" autocomplete="off" />
+          <button type="submit" class="btn btn-primary">Start</button>
+        </form>
+        <p id="unlock-error" class="unlock-error" hidden aria-live="polite">Fout cijfer. Probeer opnieuw.</p>
+      </section>
+
       <!-- Startscherm -->
-      <section id="screen-start" class="screen active">
+      <section id="screen-start" class="screen">
         <p class="instruction">Kies hoeveel verhalen en sta microfoon toe. Er komt een verhaal (TTS), daarna de countdown — dan roep je het antwoord. Goed = punten.</p>
         <p class="choice-label">Hoeveel verhalen?</p>
         <div class="start-choices">
@@ -37,6 +47,7 @@
 
       <!-- Verhaal + countdown -->
       <section id="screen-question" class="screen">
+        <p id="bonus-badge" class="bonus-badge" aria-live="polite" hidden>Bonus! Dubbele punten</p>
         <p id="question-text" class="question-text"></p>
         <button id="btn-skip-tts" class="btn btn-skip" type="button" aria-label="Sla verhaal over, ga naar countdown" hidden>Naar countdown</button>
         <div id="countdown" class="countdown" aria-live="polite"></div>

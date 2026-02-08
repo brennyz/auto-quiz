@@ -8,7 +8,10 @@
     tts_speed: 0.9
   };
 
+  var UNLOCK_CODE = '2';
+
   var screens = {
+    unlock: document.getElementById('screen-unlock'),
     start: document.getElementById('screen-start'),
     loading: document.getElementById('screen-loading'),
     question: document.getElementById('screen-question'),
@@ -28,10 +31,13 @@
   var scoreText = document.getElementById('score-text');
   var progressText = document.getElementById('progress-text');
   var audioCountdown = document.getElementById('audio-countdown');
+  var bonusBadge = document.getElementById('bonus-badge');
 
   var storiesPerRound = 10;
   var currentIndex = 0;
   var score = 0;
+  var bonusIndex = 0;
+  var streak = 0;
   var currentStory = null;
   var storySkipped = false;
   var recognition = null;
@@ -256,8 +262,12 @@
   function normalizeAnswer(s) {
     if (!s || typeof s !== 'string') return '';
     var t = s.replace(/\s+/g, ' ').replace(/[.,!?]/g, '').toLowerCase().trim();
-    var articles = /^(het|de|een|deze|dit|dat|die)\s+/i;
-    t = t.replace(articles, '').trim();
+    var articles = /^(het|de|een|deze|dit|dat|die|'t)\s*/i;
+    var prev;
+    do {
+      prev = t;
+      t = t.replace(articles, '').trim();
+    } while (t !== prev && t.length > 0);
     return t;
   }
 
@@ -338,6 +348,8 @@
       .then(function () {
         currentIndex = 0;
         score = 0;
+        streak = 0;
+        bonusIndex = Math.floor(Math.random() * storiesPerRound);
         startWaitMusicContinuous();
         showScreen('question');
         nextStory();
@@ -345,6 +357,8 @@
       .catch(function () {
         currentIndex = 0;
         score = 0;
+        streak = 0;
+        bonusIndex = Math.floor(Math.random() * storiesPerRound);
         startWaitMusicContinuous();
         showScreen('question');
         nextStory();
@@ -381,9 +395,44 @@
           }
         }
       }
-      if (someoneCorrect) score++;
-      showFeedback(someoneCorrect, s.answer, answers.length);
+      var isBonus = currentIndex === bonusIndex;
+      if (someoneCorrect) {
+        streak++;
+        var base = isBonus ? 2 : 1;
+        var combo = streak >= 2 ? streak - 1 : 0;
+        score += base + combo;
+      } else {
+        streak = 0;
+      }
+      var comboPoints = someoneCorrect && streak >= 2 ? streak - 1 : 0;
+      showFeedback(someoneCorrect, s.answer, answers.length, isBonus, comboPoints);
     });
+  }
+
+  function useStory(s) {
+    currentStory = s;
+    if (bonusBadge) bonusBadge.hidden = currentIndex !== bonusIndex;
+    questionText.textContent = s.story;
+    countdownEl.textContent = '';
+    if (btnSkipTts) {
+      btnSkipTts.hidden = false;
+      btnSkipTts.onclick = function () {
+        storySkipped = true;
+        runAfterStoryTTS(s);
+      };
+    }
+    duckWaitMusic();
+    speak(s.story).then(function () {
+      if (storySkipped) return;
+      runAfterStoryTTS(s);
+    });
+  }
+
+  function isSameStory(a, b) {
+    if (!a || !b) return false;
+    var sameAnswer = a.answer && b.answer && normalizeAnswer(a.answer) === normalizeAnswer(b.answer);
+    var sameStart = a.story && b.story && a.story.slice(0, 80) === b.story.slice(0, 80);
+    return sameAnswer || sameStart;
   }
 
   function nextStory() {
@@ -399,52 +448,45 @@
     if (btnSkipTts) btnSkipTts.hidden = true;
 
     var category = STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)];
-    fetchStory(category).then(function (s) {
-      currentStory = s;
-      questionText.textContent = s.story;
-      countdownEl.textContent = '';
-      if (btnSkipTts) {
-        btnSkipTts.hidden = false;
-        btnSkipTts.onclick = function () {
-          storySkipped = true;
-          runAfterStoryTTS(s);
-        };
-      }
 
-      duckWaitMusic();
-      speak(s.story).then(function () {
-        if (storySkipped) return;
-        runAfterStoryTTS(s);
+    function tryFetch(avoidCategory) {
+      var others = STORY_CATEGORIES.filter(function (c) { return c !== avoidCategory; });
+      var cat = avoidCategory != null && others.length > 0
+        ? others[Math.floor(Math.random() * others.length)]
+        : category;
+      return fetchStory(cat).then(function (s) {
+        if (currentStory && isSameStory(s, currentStory)) {
+          if (avoidCategory == null) return tryFetch(cat);
+          return getFallbackStory();
+        }
+        return s;
       });
+    }
+
+    tryFetch().then(function (s) {
+      if (currentStory && isSameStory(s, currentStory)) s = getFallbackStory();
+      useStory(s);
     }).catch(function () {
       currentStory = getFallbackStory();
-      questionText.textContent = currentStory.story;
-      if (btnSkipTts) {
-        btnSkipTts.hidden = false;
-        btnSkipTts.onclick = function () {
-          storySkipped = true;
-          runAfterStoryTTS(currentStory);
-        };
-      }
-      duckWaitMusic();
-      speak(currentStory.story).then(function () {
-        if (storySkipped) return;
-        runAfterStoryTTS(currentStory);
-      });
+      useStory(currentStory);
     });
   }
 
-  function showFeedback(someoneCorrect, answer, answerCount) {
+  function showFeedback(someoneCorrect, answer, answerCount, isBonus, comboPoints) {
     duckWaitMusic();
     showScreen('feedback');
     updateProgress();
     if (btnNext && btnNext.focus) setTimeout(function () { btnNext.focus(); }, 100);
     var ttsText;
+    var extra = [];
+    if (someoneCorrect && isBonus) extra.push('Dubbele punten!');
+    if (comboPoints > 0) extra.push('Combo! ' + comboPoints + ' extra.');
+    var extraLine = extra.length > 0 ? ' ' + extra.join(' ') : '';
     if (someoneCorrect) {
-      feedbackResult.textContent = '\u2705 Iemand had het goed!';
+      feedbackResult.textContent = '\u2705 Iemand had het goed!' + extraLine;
       feedbackResult.className = 'feedback-result correct';
-      feedbackAnswer.textContent = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.';
-      ttsText = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.';
+      feedbackAnswer.textContent = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.' + extraLine;
+      ttsText = 'Iemand had het goed. Het antwoord is ' + answer + '.' + extraLine;
     } else {
       feedbackResult.textContent = '\u274C Niemand had het goed';
       feedbackResult.className = 'feedback-result incorrect';
@@ -471,8 +513,20 @@
   function endRound() {
     if (progressText) progressText.hidden = true;
     showScreen('end');
-    scoreText.textContent = 'Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
-    speak('Ronde afgerond. Je had ' + score + ' van de ' + storiesPerRound + ' goed.');
+    var endMsg;
+    var ttsMsg;
+    if (score === storiesPerRound && storiesPerRound > 0) {
+      endMsg = 'Kampioen! Alles goed: ' + score + ' van ' + storiesPerRound + '.';
+      ttsMsg = 'Kampioen! Alles goed. ' + score + ' van ' + storiesPerRound + '.';
+    } else if (score >= storiesPerRound * 0.8) {
+      endMsg = 'Goed gedaan! Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+      ttsMsg = 'Goed gedaan. Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+    } else {
+      endMsg = 'Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+      ttsMsg = 'Ronde afgerond. Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+    }
+    scoreText.textContent = endMsg;
+    speak(ttsMsg);
     if (btnRestart && btnRestart.focus) setTimeout(function () { btnRestart.focus(); }, 100);
   }
 
@@ -482,6 +536,33 @@
     var b15 = document.getElementById('btn-start-15');
     var bNext = document.getElementById('btn-next');
     var bRestart = document.getElementById('btn-restart');
+    var unlockForm = document.getElementById('unlock-form');
+    var unlockInput = document.getElementById('unlock-input');
+    var unlockError = document.getElementById('unlock-error');
+
+    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('unlocked') === 'true') {
+      showScreen('start');
+    } else {
+      showScreen('unlock');
+    }
+
+    if (unlockForm && unlockInput) {
+      unlockForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var val = String(unlockInput.value).trim();
+        if (val === UNLOCK_CODE) {
+          if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('unlocked', 'true');
+          if (unlockError) unlockError.hidden = true;
+          showScreen('start');
+        } else {
+          if (unlockError) {
+            unlockError.hidden = false;
+            unlockError.textContent = 'Fout cijfer. Probeer opnieuw.';
+          }
+        }
+      });
+    }
+
     if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
     if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
     if (b15) b15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });

@@ -7,13 +7,24 @@ const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemi
 
 const CATEGORIES = ['biologie', 'aardrijkskunde', 'geschiedenis', 'wiskunde', 'dieren', 'algemeen'];
 
-const SYSTEM_PROMPT = `Je bent een verhalenverteller voor een spel in de auto. Je verzin korte verhalen (maximaal 120 woorden) voor niveau middelbare school klas 1. In elk verhaal zit één antwoord verborgen: een ding, dier, getal, plaats of begrip dat de luisteraars moeten raden. Het verhaal moet leuk en spannend zijn om via TTS te horen. Geef je antwoord ALLEEN in dit formaat, verder niets:
+const SYSTEM_PROMPT = `Je bent een verhalenverteller voor een spel in de auto (niveau middelbare school klas 1). In elk verhaal zit één antwoord verborgen: een ding, dier, getal, plaats of begrip dat de luisteraars moeten raden. Het antwoord moet een bekend, herkenbaar woord zijn — niet vergezocht of te moeilijk. Wissel af: soms duidelijke hints (makkelijk te raden), soms iets meer nadenken (iets lastiger). Verhalen mogen kort of wat langer zijn; wissel af. Geef je antwoord ALLEEN in dit formaat, verder niets:
 
 VERHAAL:
 [hier het verhaal, gewoon lopende tekst]
 
 ANTWOORD:
 [hier exact één woord of korte zin, het antwoord dat geraden moet worden]`;
+
+const LENGTH_HINTS = [
+  'Schrijf een kort verhaal (ongeveer 40–60 woorden).',
+  'Schrijf een verhaal van gemiddelde lengte (ongeveer 60–90 woorden).',
+  'Schrijf een wat langer verhaal (ongeveer 80–120 woorden).'
+];
+
+const DIFFICULTY_HINTS = [
+  'Het antwoord moet makkelijk te raden zijn: duidelijke hints, bekend begrip.',
+  'Het antwoord mag iets lastiger zijn: de luisteraars moeten even nadenken, maar het blijft een bekend woord.'
+];
 
 function getPrompt(category) {
   const onderwerpen = {
@@ -25,7 +36,9 @@ function getPrompt(category) {
     algemeen: 'een algemeen onderwerp voor klas 1'
   };
   const onderwerp = onderwerpen[category] || onderwerpen.algemeen;
-  return `Verzin een kort verhaal met een verborgen antwoord. Thema: ${onderwerp}. Het antwoord moet eenduidig te raden zijn (één woord of korte zin).`;
+  const lengthHint = LENGTH_HINTS[Math.floor(Math.random() * LENGTH_HINTS.length)];
+  const difficultyHint = DIFFICULTY_HINTS[Math.floor(Math.random() * DIFFICULTY_HINTS.length)];
+  return `Verzin een verhaal met een verborgen antwoord. Thema: ${onderwerp}. ${lengthHint} ${difficultyHint} Het antwoord is één woord of korte zin, eenduidig en niet vergezocht.`;
 }
 
 function parseResponse(text) {
