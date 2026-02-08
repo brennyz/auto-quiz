@@ -478,8 +478,8 @@
     if (btnStart5) btnStart5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
     if (btnStart10) btnStart10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
     if (btnStart15) btnStart15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
-    btnNext.addEventListener('click', toNext);
-    btnRestart.addEventListener('click', function () {
+    if (btnNext) btnNext.addEventListener('click', toNext);
+    if (btnRestart) btnRestart.addEventListener('click', function () {
       if (progressText) progressText.hidden = true;
       showScreen('start');
     });
