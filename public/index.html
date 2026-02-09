@@ -17,6 +17,10 @@
       <p class="progress" id="progress-text" aria-live="polite" hidden></p>
     </header>
 
+    <div id="update-hint" class="update-hint" hidden aria-live="polite">
+      <p>Je ziet een oude versie. Open de app opnieuw met internet (wifi) of tik om te vernieuwen.</p>
+      <button type="button" class="btn btn-secondary" id="btn-reload">Vernieuwen</button>
+    </div>
     <main class="main">
       <!-- Unlock (tijdelijk: cijfer onder 1000) -->
       <section id="screen-unlock" class="screen">
@@ -83,7 +87,9 @@
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-      navigator.serviceWorker.register('sw.js').catch(function () {});
+      navigator.serviceWorker.register('sw.js').then(function (reg) {
+        if (reg && reg.update) reg.update();
+      }).catch(function () {});
     }
   </script>
 </body>

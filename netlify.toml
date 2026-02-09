@@ -5,6 +5,17 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Service worker + manifest: niet lang cachen zodat altijd de nieuwste versie wordt geladen
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
 # SPA: alle paden naar index.html; /.netlify/functions/* wordt door Netlify apart afgehandeld
 [[redirects]]
   from = "/*"

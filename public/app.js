@@ -146,6 +146,7 @@
   function showScreen(id) {
     var k;
     for (k in screens) {
+      if (!screens[k] || !screens[k].classList) continue;
       screens[k].classList.toggle('active', k === id);
     }
   }
@@ -531,46 +532,60 @@
   }
 
   function init() {
-    var b5 = document.getElementById('btn-start-5');
-    var b10 = document.getElementById('btn-start-10');
-    var b15 = document.getElementById('btn-start-15');
-    var bNext = document.getElementById('btn-next');
-    var bRestart = document.getElementById('btn-restart');
-    var unlockForm = document.getElementById('unlock-form');
-    var unlockInput = document.getElementById('unlock-input');
-    var unlockError = document.getElementById('unlock-error');
+    try {
+      var b5 = document.getElementById('btn-start-5');
+      var b10 = document.getElementById('btn-start-10');
+      var b15 = document.getElementById('btn-start-15');
+      var bNext = document.getElementById('btn-next');
+      var bRestart = document.getElementById('btn-restart');
+      var unlockForm = document.getElementById('unlock-form');
+      var unlockInput = document.getElementById('unlock-input');
+      var unlockError = document.getElementById('unlock-error');
+      var hasUnlockScreen = document.getElementById('screen-unlock') != null;
 
-    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('unlocked') === 'true') {
-      showScreen('start');
-    } else {
-      showScreen('unlock');
-    }
-
-    if (unlockForm && unlockInput) {
-      unlockForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var val = String(unlockInput.value).trim();
-        if (val === UNLOCK_CODE) {
-          if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('unlocked', 'true');
-          if (unlockError) unlockError.hidden = true;
-          showScreen('start');
-        } else {
-          if (unlockError) {
-            unlockError.hidden = false;
-            unlockError.textContent = 'Fout cijfer. Probeer opnieuw.';
-          }
+      if (hasUnlockScreen && typeof sessionStorage !== 'undefined' && sessionStorage.getItem('unlocked') === 'true') {
+        showScreen('start');
+      } else if (hasUnlockScreen) {
+        showScreen('unlock');
+      } else {
+        showScreen('start');
+        var isMobile = /Android|iPhone|iPad|iPod|webOS|Mobile/i.test(navigator.userAgent) || ('ontouchstart' in window);
+        if (isMobile) {
+          var hint = document.getElementById('update-hint');
+          var btnReload = document.getElementById('btn-reload');
+          if (hint) hint.hidden = false;
+          if (btnReload) btnReload.addEventListener('click', function () { location.reload(); });
         }
-      });
-    }
+      }
 
-    if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
-    if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
-    if (b15) b15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
-    if (bNext) bNext.addEventListener('click', toNext);
-    if (bRestart) bRestart.addEventListener('click', function () {
-      if (progressText) progressText.hidden = true;
+      if (unlockForm && unlockInput) {
+        unlockForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var val = String(unlockInput.value).trim();
+          if (val === UNLOCK_CODE) {
+            if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('unlocked', 'true');
+            if (unlockError) unlockError.hidden = true;
+            showScreen('start');
+          } else {
+            if (unlockError) {
+              unlockError.hidden = false;
+              unlockError.textContent = 'Fout cijfer. Probeer opnieuw.';
+            }
+          }
+        });
+      }
+
+      if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
+      if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
+      if (b15) b15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
+      if (bNext) bNext.addEventListener('click', toNext);
+      if (bRestart) bRestart.addEventListener('click', function () {
+        if (progressText) progressText.hidden = true;
+        showScreen('start');
+      });
+    } catch (err) {
       showScreen('start');
-    });
+    }
   }
 
   if (document.readyState === 'loading') {

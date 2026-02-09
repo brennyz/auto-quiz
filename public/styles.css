@@ -109,6 +109,21 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.update-hint {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(248, 113, 113, 0.15);
+  border: 2px solid var(--incorrect);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.update-hint p {
+  margin: 0 0 0.75rem;
+}
+
 .unlock-question {
   margin-bottom: 1.25rem;
   font-size: 1.1rem;

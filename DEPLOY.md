@@ -3,6 +3,8 @@
 **Live site:** https://car-quiz-pwa.netlify.app  
 **GitHub repo:** https://github.com/brennyz/auto-quiz
 
+**Welke versie staat live?** Netlify bouwt na elke push. Op **mobiel** kan de PWA een oude gecachte versie tonen (geen unlock-scherm). Oplossing: op mobiel verschijnt dan een melding “Je ziet een oude versie” met knop **Vernieuwen** — tik daarop met wifi aan. Of: open de site in de browser (niet via home screen) met wifi, of wis site-gegevens voor car-quiz-pwa.netlify.app. De app haalt index.html en app.js *network-first* op; na één keer vernieuwen met internet zou het unlock-scherm (cijfer 2) zichtbaar moeten zijn.
+
 De map is gekoppeld aan Netlify. Na wijzigingen: `npx netlify deploy --prod --dir=public`  
 Of: push naar GitHub en zet in Netlify **Build & deploy** → **Continuous deployment** aan (koppel de repo).
 
