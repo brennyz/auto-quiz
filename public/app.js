@@ -34,6 +34,7 @@
   var bonusBadge = document.getElementById('bonus-badge');
 
   var storiesPerRound = 10;
+  var storyMode = 'klas1';
   var currentIndex = 0;
   var score = 0;
   var bonusIndex = 0;
@@ -316,17 +317,33 @@
     { story: 'Een zoogdier dat in de zee leeft en heel groot kan worden. Welk dier?', answer: 'walvis' },
     { story: 'Deze stad staat bekend om de Eiffeltoren. Welke stad?', answer: 'Parijs' }
   ];
+  var FALLBACK_STORIES_DIEREN = [
+    { story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?', answer: 'spin' },
+    { story: 'Een zoogdier dat in de zee leeft en heel groot kan worden. Welk dier?', answer: 'walvis' },
+    { story: 'Dit roofdier heeft een oranje vacht en zwarte strepen. Welk dier?', answer: 'tijger' },
+    { story: 'Een vogel die niet kan vliegen en op de Zuidpool leeft. Welk dier?', answer: 'pinguïn' },
+    { story: 'Een groot grijs dier met een slurf. Welk dier?', answer: 'olifant' },
+    { story: 'Een dier dat honing maakt en in een korf woont. Welk dier?', answer: 'bij' }
+  ];
   function getFallbackStory() {
+    if (storyMode === 'dieren-groep7') {
+      return FALLBACK_STORIES_DIEREN[Math.floor(Math.random() * FALLBACK_STORIES_DIEREN.length)];
+    }
     return FALLBACK_STORIES[Math.floor(Math.random() * FALLBACK_STORIES.length)];
   }
 
   function fetchStory(category) {
     var base = typeof location !== 'undefined' && location.origin ? location.origin : '';
     var url = base + '/.netlify/functions/generate-story';
+    var body = { category: category || STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)] };
+    if (storyMode === 'dieren-groep7') {
+      body.category = 'dieren';
+      body.mode = 'dieren-groep7';
+    }
     return fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ category: category || STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)] })
+      body: JSON.stringify(body)
     })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('API error')); })
       .then(function (data) {
@@ -448,10 +465,11 @@
     countdownEl.textContent = '';
     if (btnSkipTts) btnSkipTts.hidden = true;
 
-    var category = STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)];
+    var categories = storyMode === 'dieren-groep7' ? ['dieren'] : STORY_CATEGORIES;
+    var category = categories[Math.floor(Math.random() * categories.length)];
 
     function tryFetch(avoidCategory) {
-      var others = STORY_CATEGORIES.filter(function (c) { return c !== avoidCategory; });
+      var others = categories.filter(function (c) { return c !== avoidCategory; });
       var cat = avoidCategory != null && others.length > 0
         ? others[Math.floor(Math.random() * others.length)]
         : category;
@@ -572,6 +590,23 @@
               unlockError.textContent = 'Fout cijfer. Probeer opnieuw.';
             }
           }
+        });
+      }
+
+      var btnModeKlas1 = document.getElementById('btn-mode-klas1');
+      var btnModeDieren = document.getElementById('btn-mode-dieren');
+      if (btnModeKlas1) {
+        btnModeKlas1.addEventListener('click', function () {
+          storyMode = 'klas1';
+          if (btnModeKlas1) btnModeKlas1.classList.add('btn-mode-default');
+          if (btnModeDieren) btnModeDieren.classList.remove('btn-mode-default');
+        });
+      }
+      if (btnModeDieren) {
+        btnModeDieren.addEventListener('click', function () {
+          storyMode = 'dieren-groep7';
+          if (btnModeDieren) btnModeDieren.classList.add('btn-mode-default');
+          if (btnModeKlas1) btnModeKlas1.classList.remove('btn-mode-default');
         });
       }
 
