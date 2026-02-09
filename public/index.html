@@ -34,11 +34,22 @@
 
       <!-- Startscherm -->
       <section id="screen-start" class="screen">
-        <p class="instruction">Kies een optie en hoeveel verhalen. Sta microfoon toe. Verhaal (TTS) → antwoord roepen → punten.</p>
-        <p class="choice-label">Welke optie?</p>
+        <p class="instruction">Kies niveau, vak en hoeveel verhalen. Sta microfoon toe. Verhaal (TTS) → antwoord roepen → punten.</p>
+        <p class="choice-label">Niveau?</p>
         <div class="mode-choices">
-          <button id="btn-mode-klas1" class="btn btn-mode btn-mode-default" type="button" aria-label="Verhalenverteller klas 1, alle onderwerpen">Verhalenverteller (klas 1)</button>
-          <button id="btn-mode-dieren" class="btn btn-mode" type="button" aria-label="Dieren groep 7">Dieren groep 7</button>
+          <button id="btn-mode-klas1" class="btn btn-mode btn-mode-default" type="button" aria-label="Middelbare school klas 1">Klas 1</button>
+          <button id="btn-mode-groep7" class="btn btn-mode" type="button" aria-label="Basisschool groep 7">Groep 7</button>
+        </div>
+        <p class="choice-label" id="vak-label">Vak (klas 1)?</p>
+        <div id="vak-klas1" class="vak-choices">
+          <button id="btn-vak-biologie" class="btn btn-vak" type="button" data-vak="biologie">Biologie</button>
+          <button id="btn-vak-aardrijkskunde" class="btn btn-vak" type="button" data-vak="aardrijkskunde">Aardrijkskunde</button>
+          <button id="btn-vak-geschiedenis" class="btn btn-vak" type="button" data-vak="geschiedenis">Geschiedenis</button>
+        </div>
+        <div id="vak-groep7" class="vak-choices" hidden>
+          <button id="btn-vak-dieren" class="btn btn-vak" type="button" data-vak="dieren">Dieren</button>
+          <button id="btn-vak-natuur" class="btn btn-vak" type="button" data-vak="natuur">Natuur</button>
+          <button id="btn-vak-aardrijkskunde-g7" class="btn btn-vak" type="button" data-vak="aardrijkskunde">Aardrijkskunde</button>
         </div>
         <p class="choice-label">Hoeveel verhalen?</p>
         <div class="start-choices">

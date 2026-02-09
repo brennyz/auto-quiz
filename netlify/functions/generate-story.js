@@ -7,7 +7,7 @@ const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemi
 
 const CATEGORIES = ['biologie', 'aardrijkskunde', 'geschiedenis', 'wiskunde', 'dieren', 'algemeen'];
 
-const SYSTEM_PROMPT = `Je bent een verhalenverteller voor een spel in de auto (niveau middelbare school klas 1). In elk verhaal zit één antwoord verborgen: een ding, dier, getal, plaats of begrip dat de luisteraars moeten raden. Het antwoord moet een bekend, herkenbaar woord zijn — niet vergezocht of te moeilijk. Wissel af: soms duidelijke hints (makkelijk te raden), soms iets meer nadenken (iets lastiger). Verhalen mogen kort of wat langer zijn; wissel af. Geef je antwoord ALLEEN in dit formaat, verder niets:
+const SYSTEM_PROMPT = `Je bent een verhalenverteller voor een spel in de auto (niveau middelbare school klas 1). Korte verhalen: maximaal 50 woorden. In elk verhaal zit één antwoord verborgen: een ding, dier, getal, plaats of begrip dat de luisteraars moeten raden. Het antwoord moet een bekend, herkenbaar woord zijn — niet vergezocht. Wissel af: soms duidelijke hints (makkelijk te raden), soms iets meer nadenken. Geef je antwoord ALLEEN in dit formaat, verder niets:
 
 VERHAAL:
 [hier het verhaal, gewoon lopende tekst]
@@ -15,18 +15,18 @@ VERHAAL:
 ANTWOORD:
 [hier exact één woord of korte zin, het antwoord dat geraden moet worden]`;
 
-const SYSTEM_PROMPT_DIEREN_GROEP7 = `Je bent een verhalenverteller voor een spel in de auto (niveau basisschool groep 7). Elk verhaal gaat over DIEREN. Het antwoord is altijd een dier: zoogdier, vogel, insect, reptiel, amfibie, enz. Het antwoord moet een bekend, herkenbaar dier zijn — niet vergezocht. Wissel af: soms duidelijke hints (makkelijk te raden), soms iets meer nadenken. Verhalen mogen kort of wat langer zijn. Geef je antwoord ALLEEN in dit formaat, verder niets:
+const SYSTEM_PROMPT_GROEP7 = `Je bent een verhalenverteller voor een spel in de auto (niveau basisschool groep 7). Korte verhalen: maximaal 50 woorden. In elk verhaal zit één antwoord verborgen dat de luisteraars moeten raden. Het antwoord moet een bekend, herkenbaar woord zijn — niet vergezocht. Wissel af: soms duidelijke hints (makkelijk te raden), soms iets meer nadenken. Geef je antwoord ALLEEN in dit formaat, verder niets:
 
 VERHAAL:
-[hier het verhaal over een dier, gewoon lopende tekst]
+[hier het verhaal, gewoon lopende tekst]
 
 ANTWOORD:
-[hier exact één dier (één woord of korte zin)]`;
+[hier exact één woord of korte zin, het antwoord dat geraden moet worden]`;
 
 const LENGTH_HINTS = [
-  'Schrijf een kort verhaal (ongeveer 40–60 woorden).',
-  'Schrijf een verhaal van gemiddelde lengte (ongeveer 60–90 woorden).',
-  'Schrijf een wat langer verhaal (ongeveer 80–120 woorden).'
+  'Schrijf een heel kort verhaal (ongeveer 20–35 woorden).',
+  'Schrijf een kort verhaal (ongeveer 25–40 woorden).',
+  'Schrijf een verhaal (ongeveer 30–50 woorden, niet langer).'
 ];
 
 const DIFFICULTY_HINTS = [
@@ -49,10 +49,17 @@ function getPrompt(category) {
   return `Verzin een verhaal met een verborgen antwoord. Thema: ${onderwerp}. ${lengthHint} ${difficultyHint} Het antwoord is één woord of korte zin, eenduidig en niet vergezocht.`;
 }
 
-function getPromptDierenGroep7() {
+const VAKKEN_GROEP7 = {
+  dieren: 'alleen over dieren; het antwoord is een dier (zoogdier, vogel, insect, reptiel, enz.)',
+  natuur: 'natuur en biologie (dieren, planten, lichaam, leefomgeving); het antwoord past bij groep 7 natuur',
+  aardrijkskunde: 'aardrijkskunde (landen, steden, rivieren, continenten, kaart); het antwoord past bij groep 7'
+};
+
+function getPromptGroep7(category) {
+  const onderwerp = VAKKEN_GROEP7[category] || VAKKEN_GROEP7.dieren;
   const lengthHint = LENGTH_HINTS[Math.floor(Math.random() * LENGTH_HINTS.length)];
   const difficultyHint = DIFFICULTY_HINTS[Math.floor(Math.random() * DIFFICULTY_HINTS.length)];
-  return `Verzin een verhaal over een dier met een verborgen antwoord (het dier). Niveau groep 7 basisschool. ${lengthHint} ${difficultyHint} Het antwoord is altijd een dier, één woord of korte zin, eenduidig en niet vergezocht.`;
+  return `Verzin een verhaal met een verborgen antwoord. Thema: ${onderwerp}. Niveau groep 7 basisschool. ${lengthHint} ${difficultyHint} Het antwoord is één woord of korte zin, eenduidig en niet vergezocht.`;
 }
 
 function parseResponse(text) {
@@ -78,21 +85,17 @@ exports.handler = async function (event, context) {
   if (event.httpMethod === 'POST' && event.body) {
     try {
       const body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
-      if (body.category && CATEGORIES.includes(body.category)) category = body.category;
-      if (body.mode === 'dieren-groep7') {
-        mode = 'dieren-groep7';
-        category = 'dieren';
-      }
+      if (body.category) category = body.category;
+      if (body.mode === 'groep7' || body.mode === 'dieren-groep7') mode = 'groep7';
     } catch (e) {}
   } else if (event.queryStringParameters && event.queryStringParameters.category) {
-    const c = event.queryStringParameters.category;
-    if (CATEGORIES.includes(c)) category = c;
+    category = event.queryStringParameters.category;
   }
 
-  const useDierenGroep7 = mode === 'dieren-groep7';
-  const systemPrompt = useDierenGroep7 ? SYSTEM_PROMPT_DIEREN_GROEP7 : SYSTEM_PROMPT;
-  const prompt = useDierenGroep7
-    ? getPromptDierenGroep7()
+  const useGroep7 = mode === 'groep7';
+  const systemPrompt = useGroep7 ? SYSTEM_PROMPT_GROEP7 : SYSTEM_PROMPT;
+  const prompt = useGroep7
+    ? getPromptGroep7(category)
     : getPrompt(category);
 
   try {

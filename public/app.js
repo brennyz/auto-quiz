@@ -35,6 +35,7 @@
 
   var storiesPerRound = 10;
   var storyMode = 'klas1';
+  var storyVak = 'biologie';
   var currentIndex = 0;
   var score = 0;
   var bonusIndex = 0;
@@ -326,7 +327,7 @@
     { story: 'Een dier dat honing maakt en in een korf woont. Welk dier?', answer: 'bij' }
   ];
   function getFallbackStory() {
-    if (storyMode === 'dieren-groep7') {
+    if (storyMode === 'groep7') {
       return FALLBACK_STORIES_DIEREN[Math.floor(Math.random() * FALLBACK_STORIES_DIEREN.length)];
     }
     return FALLBACK_STORIES[Math.floor(Math.random() * FALLBACK_STORIES.length)];
@@ -335,11 +336,8 @@
   function fetchStory(category) {
     var base = typeof location !== 'undefined' && location.origin ? location.origin : '';
     var url = base + '/.netlify/functions/generate-story';
-    var body = { category: category || STORY_CATEGORIES[Math.floor(Math.random() * STORY_CATEGORIES.length)] };
-    if (storyMode === 'dieren-groep7') {
-      body.category = 'dieren';
-      body.mode = 'dieren-groep7';
-    }
+    var cat = category || storyVak;
+    var body = { category: cat, mode: storyMode };
     return fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -465,19 +463,11 @@
     countdownEl.textContent = '';
     if (btnSkipTts) btnSkipTts.hidden = true;
 
-    var categories = storyMode === 'dieren-groep7' ? ['dieren'] : STORY_CATEGORIES;
-    var category = categories[Math.floor(Math.random() * categories.length)];
+    var category = storyVak;
 
-    function tryFetch(avoidCategory) {
-      var others = categories.filter(function (c) { return c !== avoidCategory; });
-      var cat = avoidCategory != null && others.length > 0
-        ? others[Math.floor(Math.random() * others.length)]
-        : category;
-      return fetchStory(cat).then(function (s) {
-        if (currentStory && isSameStory(s, currentStory)) {
-          if (avoidCategory == null) return tryFetch(cat);
-          return getFallbackStory();
-        }
+    function tryFetch() {
+      return fetchStory(category).then(function (s) {
+        if (currentStory && isSameStory(s, currentStory)) return getFallbackStory();
         return s;
       });
     }
@@ -594,21 +584,51 @@
       }
 
       var btnModeKlas1 = document.getElementById('btn-mode-klas1');
-      var btnModeDieren = document.getElementById('btn-mode-dieren');
+      var btnModeGroep7 = document.getElementById('btn-mode-groep7');
+      var vakKlas1 = document.getElementById('vak-klas1');
+      var vakGroep7 = document.getElementById('vak-groep7');
+      var vakLabel = document.getElementById('vak-label');
+
+      function setVakDefault(vak) {
+        storyVak = vak;
+        var all = document.querySelectorAll('.btn-vak');
+        for (var i = 0; i < all.length; i++) {
+          all[i].classList.toggle('btn-vak-default', all[i].getAttribute('data-vak') === vak);
+        }
+      }
+
       if (btnModeKlas1) {
         btnModeKlas1.addEventListener('click', function () {
           storyMode = 'klas1';
-          if (btnModeKlas1) btnModeKlas1.classList.add('btn-mode-default');
-          if (btnModeDieren) btnModeDieren.classList.remove('btn-mode-default');
+          storyVak = 'biologie';
+          btnModeKlas1.classList.add('btn-mode-default');
+          if (btnModeGroep7) btnModeGroep7.classList.remove('btn-mode-default');
+          if (vakKlas1) vakKlas1.hidden = false;
+          if (vakGroep7) vakGroep7.hidden = true;
+          if (vakLabel) vakLabel.textContent = 'Vak (klas 1)?';
+          setVakDefault('biologie');
         });
       }
-      if (btnModeDieren) {
-        btnModeDieren.addEventListener('click', function () {
-          storyMode = 'dieren-groep7';
-          if (btnModeDieren) btnModeDieren.classList.add('btn-mode-default');
+      if (btnModeGroep7) {
+        btnModeGroep7.addEventListener('click', function () {
+          storyMode = 'groep7';
+          storyVak = 'dieren';
+          if (btnModeGroep7) btnModeGroep7.classList.add('btn-mode-default');
           if (btnModeKlas1) btnModeKlas1.classList.remove('btn-mode-default');
+          if (vakKlas1) vakKlas1.hidden = true;
+          if (vakGroep7) vakGroep7.hidden = false;
+          if (vakLabel) vakLabel.textContent = 'Vak (groep 7)?';
+          setVakDefault('dieren');
         });
       }
+
+      var vakButtons = document.querySelectorAll('.btn-vak[data-vak]');
+      for (var j = 0; j < vakButtons.length; j++) {
+        vakButtons[j].addEventListener('click', function () {
+          setVakDefault(this.getAttribute('data-vak'));
+        });
+      }
+      setVakDefault('biologie');
 
       if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
       if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
