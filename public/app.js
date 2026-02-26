@@ -10,28 +10,11 @@
 
   var UNLOCK_CODE = '2';
 
-  var screens = {
-    unlock: document.getElementById('screen-unlock'),
-    start: document.getElementById('screen-start'),
-    loading: document.getElementById('screen-loading'),
-    question: document.getElementById('screen-question'),
-    feedback: document.getElementById('screen-feedback'),
-    end: document.getElementById('screen-end')
-  };
-  var btnStart5 = document.getElementById('btn-start-5');
-  var btnStart10 = document.getElementById('btn-start-10');
-  var btnStart15 = document.getElementById('btn-start-15');
-  var btnNext = document.getElementById('btn-next');
-  var btnSkipTts = document.getElementById('btn-skip-tts');
-  var btnRestart = document.getElementById('btn-restart');
-  var questionText = document.getElementById('question-text');
-  var countdownEl = document.getElementById('countdown');
-  var feedbackResult = document.getElementById('feedback-result');
-  var feedbackAnswer = document.getElementById('feedback-answer');
-  var scoreText = document.getElementById('score-text');
-  var progressText = document.getElementById('progress-text');
-  var audioCountdown = document.getElementById('audio-countdown');
-  var bonusBadge = document.getElementById('bonus-badge');
+  var screens, btnStart5, btnStart10, btnStart15, btnNext, btnSkipTts, btnRestart;
+  var questionText, countdownEl, feedbackResult, feedbackAnswer, scoreText, progressText;
+  var audioCountdown, bonusBadge, progressBarWrap, progressBarFill;
+  var streakIndicator, streakCount, scorePop, feedbackIcon, micIndicator;
+  var endIcon, endTitle, endStats, highScoreMsg, hintText, confettiCanvas;
 
   var storiesPerRound = 10;
   var storyMode = 'klas1';
@@ -40,12 +23,14 @@
   var score = 0;
   var bonusIndex = 0;
   var streak = 0;
+  var maxStreak = 0;
+  var correctCount = 0;
+  var bonusPoints = 0;
   var currentStory = null;
   var storySkipped = false;
   var recognition = null;
   var micPermissionGranted = false;
 
-  // --- Wachtmuziek: altijd aan, duck bij stem/countdown ---
   var audioCtx = null;
   var waitMusicBuffer = null;
   var waitMusicSource = null;
@@ -76,22 +61,13 @@
 
   function loadWaitMusic() {
     return new Promise(function (resolve) {
-      if (waitMusicBuffer) {
-        resolve();
-        return;
-      }
+      if (waitMusicBuffer) { resolve(); return; }
       var ctx = getAudioContext();
-      if (!ctx) {
-        resolve();
-        return;
-      }
+      if (!ctx) { resolve(); return; }
       fetch('sounds/wait-music.wav')
         .then(function (r) { return r.arrayBuffer(); })
         .then(function (buf) { return ctx.decodeAudioData(buf); })
-        .then(function (buffer) {
-          waitMusicBuffer = buffer;
-          resolve();
-        })
+        .then(function (buffer) { waitMusicBuffer = buffer; resolve(); })
         .catch(function () { resolve(); });
     });
   }
@@ -244,21 +220,15 @@
           }
         }
       };
-      recognition.onend = function () {
-        if (!resolved) done();
-      };
-      recognition.onerror = function () {
-        if (!resolved) done();
-      };
+      recognition.onend = function () { if (!resolved) done(); };
+      recognition.onerror = function () { if (!resolved) done(); };
       try {
         recognition.start();
       } catch (err) {
         resolve([]);
         return;
       }
-      setTimeout(function () {
-        if (!resolved) done();
-      }, timeoutMs || 10000);
+      setTimeout(function () { if (!resolved) done(); }, timeoutMs || 10000);
     });
   }
 
@@ -292,7 +262,7 @@
 
   function cryptoShuffle(arr) {
     var a = arr.slice();
-    var i, j, t, tmp;
+    var i, j, t;
     var buf = new Uint32Array(1);
     for (i = a.length - 1; i > 0; i--) {
       if (window.crypto && window.crypto.getRandomValues) {
@@ -308,11 +278,9 @@
     return a;
   }
 
-  var STORY_CATEGORIES = ['biologie', 'aardrijkskunde', 'geschiedenis', 'wiskunde', 'dieren', 'algemeen'];
-
   var FALLBACK_STORIES = [
     { story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?', answer: 'spin' },
-    { story: 'Dit grote land ligt voor een groot deel in Azië. De hoofdstad is Moskou. Welk land?', answer: 'Rusland' },
+    { story: 'Dit grote land ligt voor een groot deel in Azi\u00eb. De hoofdstad is Moskou. Welk land?', answer: 'Rusland' },
     { story: 'Een getal. Als je het deelt door 2 heb je 5. Welk getal?', answer: 'tien' },
     { story: 'Dit orgaan in je lichaam pompt bloed rond. Welk orgaan?', answer: 'hart' },
     { story: 'Een zoogdier dat in de zee leeft en heel groot kan worden. Welk dier?', answer: 'walvis' },
@@ -322,10 +290,11 @@
     { story: 'Er was eens een klein dier met acht poten dat een web spon. Het leefde in een hoek van de schuur. Welk dier was het?', answer: 'spin' },
     { story: 'Een zoogdier dat in de zee leeft en heel groot kan worden. Welk dier?', answer: 'walvis' },
     { story: 'Dit roofdier heeft een oranje vacht en zwarte strepen. Welk dier?', answer: 'tijger' },
-    { story: 'Een vogel die niet kan vliegen en op de Zuidpool leeft. Welk dier?', answer: 'pinguïn' },
+    { story: 'Een vogel die niet kan vliegen en op de Zuidpool leeft. Welk dier?', answer: 'pingu\u00efn' },
     { story: 'Een groot grijs dier met een slurf. Welk dier?', answer: 'olifant' },
     { story: 'Een dier dat honing maakt en in een korf woont. Welk dier?', answer: 'bij' }
   ];
+
   function getFallbackStory() {
     if (storyMode === 'groep7') {
       return FALLBACK_STORIES_DIEREN[Math.floor(Math.random() * FALLBACK_STORIES_DIEREN.length)];
@@ -353,54 +322,207 @@
       });
   }
 
+  // --- Progress bar ---
+  function updateProgress() {
+    if (!progressText || !progressBarWrap || !progressBarFill) return;
+    var pct = storiesPerRound > 0 ? ((currentIndex) / storiesPerRound) * 100 : 0;
+    progressBarFill.style.width = Math.min(pct, 100) + '%';
+    progressText.innerHTML =
+      '<span>Verhaal ' + (currentIndex + 1) + '/' + storiesPerRound + '</span>' +
+      '<span>Score: ' + score + '</span>';
+    progressBarWrap.hidden = false;
+  }
+
+  // --- Streak display ---
+  function updateStreakDisplay() {
+    if (!streakIndicator || !streakCount) return;
+    if (streak >= 2) {
+      streakCount.textContent = streak + 'x streak!';
+      streakIndicator.hidden = false;
+    } else {
+      streakIndicator.hidden = true;
+    }
+  }
+
+  // --- Confetti ---
+  function launchConfetti() {
+    if (!confettiCanvas) return;
+    var ctx = confettiCanvas.getContext('2d');
+    if (!ctx) return;
+    confettiCanvas.width = window.innerWidth;
+    confettiCanvas.height = window.innerHeight;
+
+    var particles = [];
+    var colors = ['#f472b6', '#c084fc', '#34d399', '#fbbf24', '#60a5fa', '#f87171'];
+    var count = 80;
+    for (var i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * confettiCanvas.width,
+        y: -20 - Math.random() * 200,
+        w: 4 + Math.random() * 6,
+        h: 8 + Math.random() * 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        vx: (Math.random() - 0.5) * 4,
+        vy: 2 + Math.random() * 4,
+        rot: Math.random() * 360,
+        rotSpeed: (Math.random() - 0.5) * 8,
+        life: 1
+      });
+    }
+
+    var startTime = Date.now();
+    var duration = 2500;
+
+    function draw() {
+      var elapsed = Date.now() - startTime;
+      if (elapsed > duration) {
+        ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        return;
+      }
+      ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      var fade = Math.max(0, 1 - (elapsed - duration * 0.6) / (duration * 0.4));
+      for (var j = 0; j < particles.length; j++) {
+        var p = particles[j];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.08;
+        p.rot += p.rotSpeed;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
+  function miniConfetti() {
+    if (!confettiCanvas) return;
+    var ctx = confettiCanvas.getContext('2d');
+    if (!ctx) return;
+    confettiCanvas.width = window.innerWidth;
+    confettiCanvas.height = window.innerHeight;
+
+    var particles = [];
+    var colors = ['#34d399', '#fbbf24', '#c084fc'];
+    var cx = confettiCanvas.width / 2;
+    var cy = confettiCanvas.height / 2 - 50;
+    for (var i = 0; i < 20; i++) {
+      var angle = (Math.random() * Math.PI * 2);
+      var speed = 2 + Math.random() * 4;
+      particles.push({
+        x: cx, y: cy,
+        w: 3 + Math.random() * 4,
+        h: 3 + Math.random() * 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 2,
+        life: 1
+      });
+    }
+
+    var startTime = Date.now();
+    var duration = 1000;
+
+    function draw() {
+      var elapsed = Date.now() - startTime;
+      if (elapsed > duration) {
+        ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        return;
+      }
+      ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+      var t = elapsed / duration;
+      for (var j = 0; j < particles.length; j++) {
+        var p = particles[j];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.15;
+        ctx.globalAlpha = Math.max(0, 1 - t);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.w / 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
+  // --- High score ---
+  function getHighScoreKey() {
+    return 'hs_' + storyMode + '_' + storyVak + '_' + storiesPerRound;
+  }
+
+  function getHighScore() {
+    try {
+      var val = localStorage.getItem(getHighScoreKey());
+      return val ? parseInt(val, 10) : 0;
+    } catch (e) { return 0; }
+  }
+
+  function setHighScore(s) {
+    try { localStorage.setItem(getHighScoreKey(), String(s)); } catch (e) {}
+  }
+
   function startQuiz() {
     showScreen('loading');
-    countdownEl.textContent = '';
+    if (countdownEl) countdownEl.textContent = '';
     unlockCountdownAudio();
 
     resumeAudioContext()
       .then(function () { return requestMicrophonePermission(); })
       .then(function () { return loadWaitMusic(); })
       .then(function () {
-        currentIndex = 0;
-        score = 0;
-        streak = 0;
-        bonusIndex = Math.floor(Math.random() * storiesPerRound);
-        startWaitMusicContinuous();
-        showScreen('question');
-        nextStory();
+        beginRound();
       })
       .catch(function () {
-        currentIndex = 0;
-        score = 0;
-        streak = 0;
-        bonusIndex = Math.floor(Math.random() * storiesPerRound);
-        startWaitMusicContinuous();
-        showScreen('question');
-        nextStory();
+        beginRound();
       });
   }
 
-  function updateProgress() {
-    if (!progressText) return;
-    progressText.textContent = 'Verhaal ' + (currentIndex + 1) + ' van ' + storiesPerRound + ' · Score: ' + score;
-    progressText.hidden = false;
+  function beginRound() {
+    currentIndex = 0;
+    score = 0;
+    streak = 0;
+    maxStreak = 0;
+    correctCount = 0;
+    bonusPoints = 0;
+    bonusIndex = Math.floor(Math.random() * storiesPerRound);
+    startWaitMusicContinuous();
+    showScreen('question');
+    nextStory();
+  }
+
+  function showMicIndicator(visible) {
+    if (micIndicator) micIndicator.hidden = !visible;
+    if (hintText) hintText.hidden = visible;
   }
 
   function runAfterStoryTTS(s) {
     if (btnSkipTts) btnSkipTts.hidden = true;
     stopSpeaking();
     restoreWaitMusic();
-    countdownEl.textContent = 'Antwoord!';
-    countdownEl.setAttribute('aria-live', 'polite');
-    if (countdownEl.classList) countdownEl.classList.add('listening');
+    if (countdownEl) {
+      countdownEl.textContent = 'Antwoord!';
+      countdownEl.setAttribute('aria-live', 'polite');
+      if (countdownEl.classList) countdownEl.classList.add('listening');
+    }
+    showMicIndicator(true);
     var listeningLabel = setTimeout(function () {
-      countdownEl.textContent = 'Luisteren…';
-    }, 1500);
+      if (countdownEl) countdownEl.textContent = '';
+    }, 1200);
     listenForAnswer(10000).then(function (answers) {
       clearTimeout(listeningLabel);
-      countdownEl.classList.remove('listening');
-      countdownEl.textContent = '';
+      if (countdownEl) {
+        countdownEl.classList.remove('listening');
+        countdownEl.textContent = '';
+      }
+      showMicIndicator(false);
       var someoneCorrect = false;
       var i;
       if (Array.isArray(answers) && answers.length > 0) {
@@ -412,24 +534,32 @@
         }
       }
       var isBonus = currentIndex === bonusIndex;
+      var earnedPoints = 0;
       if (someoneCorrect) {
         streak++;
+        if (streak > maxStreak) maxStreak = streak;
+        correctCount++;
         var base = isBonus ? 2 : 1;
         var combo = streak >= 2 ? streak - 1 : 0;
-        score += base + combo;
+        earnedPoints = base + combo;
+        score += earnedPoints;
+        if (isBonus) bonusPoints += 1;
+        if (combo > 0) bonusPoints += combo;
       } else {
         streak = 0;
       }
       var comboPoints = someoneCorrect && streak >= 2 ? streak - 1 : 0;
-      showFeedback(someoneCorrect, s.answer, answers.length, isBonus, comboPoints);
+      showFeedback(someoneCorrect, s.answer, answers.length, isBonus, comboPoints, earnedPoints);
     });
   }
 
   function useStory(s) {
     currentStory = s;
     if (bonusBadge) bonusBadge.hidden = currentIndex !== bonusIndex;
-    questionText.textContent = s.story;
-    countdownEl.textContent = '';
+    if (questionText) questionText.textContent = s.story;
+    if (countdownEl) countdownEl.textContent = '';
+    showMicIndicator(false);
+    updateStreakDisplay();
     if (btnSkipTts) {
       btnSkipTts.hidden = false;
       btnSkipTts.onclick = function () {
@@ -459,9 +589,10 @@
       return;
     }
     updateProgress();
-    questionText.textContent = 'Verhaal laden…';
-    countdownEl.textContent = '';
+    if (questionText) questionText.textContent = 'Verhaal laden\u2026';
+    if (countdownEl) countdownEl.textContent = '';
     if (btnSkipTts) btnSkipTts.hidden = true;
+    showMicIndicator(false);
 
     var category = storyVak;
 
@@ -481,30 +612,40 @@
     });
   }
 
-  function showFeedback(someoneCorrect, answer, answerCount, isBonus, comboPoints) {
+  function showFeedback(someoneCorrect, answer, answerCount, isBonus, comboPoints, earnedPoints) {
     duckWaitMusic();
     showScreen('feedback');
     updateProgress();
     if (btnNext && btnNext.focus) setTimeout(function () { btnNext.focus(); }, 100);
+
     var ttsText;
     var extra = [];
     if (someoneCorrect && isBonus) extra.push('Dubbele punten!');
     if (comboPoints > 0) extra.push('Combo! ' + comboPoints + ' extra.');
     var extraLine = extra.length > 0 ? ' ' + extra.join(' ') : '';
+
     if (someoneCorrect) {
-      feedbackResult.textContent = '\u2705 Iemand had het goed!' + extraLine;
+      if (feedbackIcon) feedbackIcon.textContent = '\u2705';
+      feedbackResult.textContent = 'Goed!' + extraLine;
       feedbackResult.className = 'feedback-result correct';
-      feedbackAnswer.textContent = 'Niet iedereen had het goed, maar iemand wel. Het antwoord is namelijk ' + answer + '.' + extraLine;
-      ttsText = 'Iemand had het goed. Het antwoord is ' + answer + '.' + extraLine;
+      feedbackAnswer.textContent = 'Het antwoord is: ' + answer;
+      ttsText = 'Goed! Het antwoord is ' + answer + '.' + extraLine;
+      if (scorePop && earnedPoints > 0) {
+        scorePop.textContent = '+' + earnedPoints + ' punt' + (earnedPoints > 1 ? 'en' : '');
+        scorePop.hidden = false;
+      }
+      miniConfetti();
     } else {
-      feedbackResult.textContent = '\u274C Niemand had het goed';
+      if (feedbackIcon) feedbackIcon.textContent = '\u274C';
+      feedbackResult.textContent = 'Helaas!';
       feedbackResult.className = 'feedback-result incorrect';
+      if (scorePop) scorePop.hidden = true;
       if (answerCount === 0) {
-        feedbackAnswer.textContent = 'We hoorden geen antwoord. Het is namelijk ' + answer + '.';
-        ttsText = 'We hoorden geen antwoord. Het is namelijk ' + answer + '.';
+        feedbackAnswer.textContent = 'We hoorden geen antwoord. Het is: ' + answer;
+        ttsText = 'We hoorden geen antwoord. Het is ' + answer + '.';
       } else {
-        feedbackAnswer.textContent = 'Niemand had het juiste antwoord. Het is namelijk ' + answer + '.';
-        ttsText = 'Niemand had het juiste antwoord. Het is namelijk ' + answer + '.';
+        feedbackAnswer.textContent = 'Het juiste antwoord is: ' + answer;
+        ttsText = 'Helaas. Het juiste antwoord is ' + answer + '.';
       }
     }
     speak(ttsText).then(function () {
@@ -514,42 +655,110 @@
 
   function toNext() {
     stopSpeaking();
+    if (scorePop) scorePop.hidden = true;
     currentIndex++;
     showScreen('question');
     nextStory();
   }
 
   function endRound() {
-    if (progressText) progressText.hidden = true;
+    if (progressBarWrap) progressBarWrap.hidden = true;
     showScreen('end');
-    var endMsg;
-    var ttsMsg;
-    if (score === storiesPerRound && storiesPerRound > 0) {
-      endMsg = 'Kampioen! Alles goed: ' + score + ' van ' + storiesPerRound + '.';
-      ttsMsg = 'Kampioen! Alles goed. ' + score + ' van ' + storiesPerRound + '.';
-    } else if (score >= storiesPerRound * 0.8) {
-      endMsg = 'Goed gedaan! Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
-      ttsMsg = 'Goed gedaan. Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+
+    var pct = storiesPerRound > 0 ? Math.round((correctCount / storiesPerRound) * 100) : 0;
+    var prevHigh = getHighScore();
+    var isNewHigh = score > prevHigh && score > 0;
+    if (isNewHigh) setHighScore(score);
+
+    var endMsg, ttsMsg, iconText;
+    if (pct === 100) {
+      iconText = '\uD83C\uDFC6';
+      endMsg = 'Kampioen!';
+      ttsMsg = 'Kampioen! Alles goed. ' + score + ' punten.';
+    } else if (pct >= 80) {
+      iconText = '\u2B50';
+      endMsg = 'Goed gedaan!';
+      ttsMsg = 'Goed gedaan. ' + score + ' punten.';
+    } else if (pct >= 50) {
+      iconText = '\uD83D\uDC4D';
+      endMsg = 'Niet slecht!';
+      ttsMsg = 'Ronde afgerond. ' + score + ' punten.';
     } else {
-      endMsg = 'Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
-      ttsMsg = 'Ronde afgerond. Je had ' + score + ' van de ' + storiesPerRound + ' goed.';
+      iconText = '\uD83D\uDCAA';
+      endMsg = 'Volgende keer beter!';
+      ttsMsg = 'Ronde afgerond. ' + score + ' punten. Volgende keer beter!';
     }
-    scoreText.textContent = endMsg;
+
+    if (endIcon) endIcon.textContent = iconText;
+    if (endTitle) endTitle.textContent = endMsg;
+    if (scoreText) scoreText.textContent = score + ' punten — ' + correctCount + ' van ' + storiesPerRound + ' goed (' + pct + '%)';
+
+    if (endStats) {
+      endStats.innerHTML =
+        '<div class="stat-card"><span class="stat-value">' + correctCount + '/' + storiesPerRound + '</span><span class="stat-label">Goed</span></div>' +
+        '<div class="stat-card"><span class="stat-value">' + maxStreak + 'x</span><span class="stat-label">Beste streak</span></div>' +
+        '<div class="stat-card"><span class="stat-value">' + bonusPoints + '</span><span class="stat-label">Bonus punten</span></div>' +
+        '<div class="stat-card"><span class="stat-value">' + score + '</span><span class="stat-label">Totaal</span></div>';
+    }
+
+    if (highScoreMsg) {
+      if (isNewHigh) {
+        highScoreMsg.textContent = 'Nieuw record! Vorige: ' + prevHigh;
+        highScoreMsg.hidden = false;
+      } else if (prevHigh > 0) {
+        highScoreMsg.textContent = 'Record: ' + prevHigh + ' punten';
+        highScoreMsg.hidden = false;
+      } else {
+        highScoreMsg.hidden = true;
+      }
+    }
+
+    if (pct >= 80) launchConfetti();
+
     speak(ttsMsg);
     if (btnRestart && btnRestart.focus) setTimeout(function () { btnRestart.focus(); }, 100);
   }
 
   function init() {
     try {
-      var b5 = document.getElementById('btn-start-5');
-      var b10 = document.getElementById('btn-start-10');
-      var b15 = document.getElementById('btn-start-15');
-      var bNext = document.getElementById('btn-next');
-      var bRestart = document.getElementById('btn-restart');
-      var unlockForm = document.getElementById('unlock-form');
-      var unlockInput = document.getElementById('unlock-input');
-      var unlockError = document.getElementById('unlock-error');
-      var hasUnlockScreen = document.getElementById('screen-unlock') != null;
+      screens = {
+        unlock: document.getElementById('screen-unlock'),
+        start: document.getElementById('screen-start'),
+        loading: document.getElementById('screen-loading'),
+        question: document.getElementById('screen-question'),
+        feedback: document.getElementById('screen-feedback'),
+        end: document.getElementById('screen-end')
+      };
+
+      btnStart5 = document.getElementById('btn-start-5');
+      btnStart10 = document.getElementById('btn-start-10');
+      btnStart15 = document.getElementById('btn-start-15');
+      btnNext = document.getElementById('btn-next');
+      btnSkipTts = document.getElementById('btn-skip-tts');
+      btnRestart = document.getElementById('btn-restart');
+      questionText = document.getElementById('question-text');
+      countdownEl = document.getElementById('countdown');
+      feedbackResult = document.getElementById('feedback-result');
+      feedbackAnswer = document.getElementById('feedback-answer');
+      scoreText = document.getElementById('score-text');
+      progressText = document.getElementById('progress-text');
+      audioCountdown = document.getElementById('audio-countdown');
+      bonusBadge = document.getElementById('bonus-badge');
+      progressBarWrap = document.getElementById('progress-bar-wrap');
+      progressBarFill = document.getElementById('progress-bar-fill');
+      streakIndicator = document.getElementById('streak-indicator');
+      streakCount = document.getElementById('streak-count');
+      scorePop = document.getElementById('score-pop');
+      feedbackIcon = document.getElementById('feedback-icon');
+      micIndicator = document.getElementById('mic-indicator');
+      endIcon = document.getElementById('end-icon');
+      endTitle = document.getElementById('end-title');
+      endStats = document.getElementById('end-stats');
+      highScoreMsg = document.getElementById('high-score-msg');
+      hintText = document.getElementById('hint-text');
+      confettiCanvas = document.getElementById('confetti-canvas');
+
+      var hasUnlockScreen = screens.unlock != null;
 
       if (hasUnlockScreen && typeof sessionStorage !== 'undefined' && sessionStorage.getItem('unlocked') === 'true') {
         showScreen('start');
@@ -557,14 +766,11 @@
         showScreen('unlock');
       } else {
         showScreen('start');
-        var isMobile = /Android|iPhone|iPad|iPod|webOS|Mobile/i.test(navigator.userAgent) || ('ontouchstart' in window);
-        if (isMobile) {
-          var hint = document.getElementById('update-hint');
-          var btnReload = document.getElementById('btn-reload');
-          if (hint) hint.hidden = false;
-          if (btnReload) btnReload.addEventListener('click', function () { location.reload(); });
-        }
       }
+
+      var unlockForm = document.getElementById('unlock-form');
+      var unlockInput = document.getElementById('unlock-input');
+      var unlockError = document.getElementById('unlock-error');
 
       if (unlockForm && unlockInput) {
         unlockForm.addEventListener('submit', function (e) {
@@ -588,6 +794,7 @@
       var vakKlas1 = document.getElementById('vak-klas1');
       var vakGroep7 = document.getElementById('vak-groep7');
       var vakLabel = document.getElementById('vak-label');
+      var subtitleText = document.getElementById('subtitle-text');
 
       function setVakDefault(vak) {
         storyVak = vak;
@@ -605,7 +812,8 @@
           if (btnModeGroep7) btnModeGroep7.classList.remove('btn-mode-default');
           if (vakKlas1) vakKlas1.hidden = false;
           if (vakGroep7) vakGroep7.hidden = true;
-          if (vakLabel) vakLabel.textContent = 'Vak (klas 1)?';
+          if (vakLabel) vakLabel.innerHTML = '<span class="step-num">2</span> Vak (klas 1)';
+          if (subtitleText) subtitleText.textContent = 'Klas 1 \u2014 Verhaal met verborgen antwoord, daarna raden';
           setVakDefault('biologie');
         });
       }
@@ -613,11 +821,12 @@
         btnModeGroep7.addEventListener('click', function () {
           storyMode = 'groep7';
           storyVak = 'dieren';
-          if (btnModeGroep7) btnModeGroep7.classList.add('btn-mode-default');
+          btnModeGroep7.classList.add('btn-mode-default');
           if (btnModeKlas1) btnModeKlas1.classList.remove('btn-mode-default');
           if (vakKlas1) vakKlas1.hidden = true;
           if (vakGroep7) vakGroep7.hidden = false;
-          if (vakLabel) vakLabel.textContent = 'Vak (groep 7)?';
+          if (vakLabel) vakLabel.innerHTML = '<span class="step-num">2</span> Vak (groep 7)';
+          if (subtitleText) subtitleText.textContent = 'Groep 7 \u2014 Verhaal met verborgen antwoord, daarna raden';
           setVakDefault('dieren');
         });
       }
@@ -630,16 +839,16 @@
       }
       setVakDefault('biologie');
 
-      if (b5) b5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
-      if (b10) b10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
-      if (b15) b15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
-      if (bNext) bNext.addEventListener('click', toNext);
-      if (bRestart) bRestart.addEventListener('click', function () {
-        if (progressText) progressText.hidden = true;
+      if (btnStart5) btnStart5.addEventListener('click', function () { storiesPerRound = 5; startQuiz(); });
+      if (btnStart10) btnStart10.addEventListener('click', function () { storiesPerRound = 10; startQuiz(); });
+      if (btnStart15) btnStart15.addEventListener('click', function () { storiesPerRound = 15; startQuiz(); });
+      if (btnNext) btnNext.addEventListener('click', toNext);
+      if (btnRestart) btnRestart.addEventListener('click', function () {
+        if (progressBarWrap) progressBarWrap.hidden = true;
         showScreen('start');
       });
     } catch (err) {
-      showScreen('start');
+      if (screens) showScreen('start');
     }
   }
 

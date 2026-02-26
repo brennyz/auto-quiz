@@ -1,5 +1,5 @@
 // Bij elke wijziging versie verhogen zodat iedereen de nieuwste app krijgt
-const CACHE = 'auto-quiz-v5';
+const CACHE = 'auto-quiz-v6';
 
 self.addEventListener('install', function (e) {
   e.waitUntil(

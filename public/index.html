@@ -13,17 +13,24 @@
   <div id="app">
     <header class="header">
       <h1>Verhalenverteller</h1>
-      <p class="subtitle">Klas 1 — Verhaal met verborgen antwoord, daarna raden</p>
-      <p class="progress" id="progress-text" aria-live="polite" hidden></p>
+      <p class="subtitle" id="subtitle-text">Klas 1 — Verhaal met verborgen antwoord, daarna raden</p>
+      <div id="progress-bar-wrap" class="progress-bar-wrap" hidden>
+        <div class="progress-bar-track">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+        <p class="progress-info" id="progress-text" aria-live="polite"></p>
+      </div>
     </header>
 
     <div id="update-hint" class="update-hint" hidden aria-live="polite">
       <p>Je ziet een oude versie. Open de app opnieuw met internet (wifi) of tik om te vernieuwen.</p>
       <button type="button" class="btn btn-secondary" id="btn-reload">Vernieuwen</button>
     </div>
+
     <main class="main">
-      <!-- Unlock (tijdelijk: cijfer onder 1000) -->
+      <!-- Unlock -->
       <section id="screen-unlock" class="screen">
+        <div class="screen-icon">&#128274;</div>
         <p class="unlock-question">Welk cijfer onder de 1000 is het?</p>
         <form id="unlock-form" class="unlock-form">
           <input id="unlock-input" type="number" min="0" max="999" placeholder="Cijfer" aria-label="Voer cijfer in" autocomplete="off" />
@@ -32,70 +39,103 @@
         <p id="unlock-error" class="unlock-error" hidden aria-live="polite">Fout cijfer. Probeer opnieuw.</p>
       </section>
 
-      <!-- Startscherm -->
+      <!-- Start -->
       <section id="screen-start" class="screen">
-        <p class="instruction">Kies niveau, vak en hoeveel verhalen. Sta microfoon toe. Verhaal (TTS) → antwoord roepen → punten.</p>
-        <p class="choice-label">Niveau?</p>
-        <div class="mode-choices">
-          <button id="btn-mode-klas1" class="btn btn-mode btn-mode-default" type="button" aria-label="Middelbare school klas 1">Klas 1</button>
-          <button id="btn-mode-groep7" class="btn btn-mode" type="button" aria-label="Basisschool groep 7">Groep 7</button>
+        <p class="instruction">Kies niveau, vak en hoeveel verhalen.<br/>Sta microfoon toe. Verhaal (TTS) &rarr; antwoord roepen &rarr; punten.</p>
+
+        <div class="step-group">
+          <p class="choice-label"><span class="step-num">1</span> Niveau</p>
+          <div class="mode-choices">
+            <button id="btn-mode-klas1" class="btn btn-mode btn-mode-default" type="button" aria-label="Middelbare school klas 1">
+              <span class="btn-icon">&#127979;</span> Klas 1
+            </button>
+            <button id="btn-mode-groep7" class="btn btn-mode" type="button" aria-label="Basisschool groep 7">
+              <span class="btn-icon">&#9997;&#65039;</span> Groep 7
+            </button>
+          </div>
         </div>
-        <p class="choice-label" id="vak-label">Vak (klas 1)?</p>
-        <div id="vak-klas1" class="vak-choices">
-          <button id="btn-vak-biologie" class="btn btn-vak" type="button" data-vak="biologie">Biologie</button>
-          <button id="btn-vak-aardrijkskunde" class="btn btn-vak" type="button" data-vak="aardrijkskunde">Aardrijkskunde</button>
-          <button id="btn-vak-geschiedenis" class="btn btn-vak" type="button" data-vak="geschiedenis">Geschiedenis</button>
+
+        <div class="step-group">
+          <p class="choice-label" id="vak-label"><span class="step-num">2</span> Vak</p>
+          <div id="vak-klas1" class="vak-choices">
+            <button class="btn btn-vak" type="button" data-vak="biologie"><span class="btn-icon">&#129516;</span> Biologie</button>
+            <button class="btn btn-vak" type="button" data-vak="aardrijkskunde"><span class="btn-icon">&#127758;</span> Aardrijkskunde</button>
+            <button class="btn btn-vak" type="button" data-vak="geschiedenis"><span class="btn-icon">&#127984;</span> Geschiedenis</button>
+          </div>
+          <div id="vak-groep7" class="vak-choices" hidden>
+            <button class="btn btn-vak" type="button" data-vak="dieren"><span class="btn-icon">&#128062;</span> Dieren</button>
+            <button class="btn btn-vak" type="button" data-vak="natuur"><span class="btn-icon">&#127793;</span> Natuur</button>
+            <button class="btn btn-vak" type="button" data-vak="aardrijkskunde"><span class="btn-icon">&#127758;</span> Aardrijkskunde</button>
+          </div>
         </div>
-        <div id="vak-groep7" class="vak-choices" hidden>
-          <button id="btn-vak-dieren" class="btn btn-vak" type="button" data-vak="dieren">Dieren</button>
-          <button id="btn-vak-natuur" class="btn btn-vak" type="button" data-vak="natuur">Natuur</button>
-          <button id="btn-vak-aardrijkskunde-g7" class="btn btn-vak" type="button" data-vak="aardrijkskunde">Aardrijkskunde</button>
-        </div>
-        <p class="choice-label">Hoeveel verhalen?</p>
-        <div class="start-choices">
-          <button id="btn-start-5" class="btn btn-choice" type="button" aria-label="Start met 5 verhalen">5</button>
-          <button id="btn-start-10" class="btn btn-choice btn-choice-default" type="button" aria-label="Start met 10 verhalen">10</button>
-          <button id="btn-start-15" class="btn btn-choice" type="button" aria-label="Start met 15 verhalen">15</button>
+
+        <div class="step-group">
+          <p class="choice-label"><span class="step-num">3</span> Hoeveel verhalen?</p>
+          <div class="start-choices">
+            <button id="btn-start-5" class="btn btn-choice" type="button" aria-label="Start met 5 verhalen">5</button>
+            <button id="btn-start-10" class="btn btn-choice btn-choice-default" type="button" aria-label="Start met 10 verhalen">10</button>
+            <button id="btn-start-15" class="btn btn-choice" type="button" aria-label="Start met 15 verhalen">15</button>
+          </div>
         </div>
       </section>
 
-      <!-- Wachtmuziek + laden -->
+      <!-- Loading -->
       <section id="screen-loading" class="screen">
         <div class="loader" aria-hidden="true"></div>
-        <p>Verhalen voorbereiden…</p>
+        <p>Verhalen voorbereiden&hellip;</p>
       </section>
 
       <!-- Verhaal + countdown -->
       <section id="screen-question" class="screen">
+        <div id="streak-indicator" class="streak-indicator" hidden>
+          <span id="streak-count" class="streak-count"></span>
+        </div>
         <p id="bonus-badge" class="bonus-badge" aria-live="polite" hidden>Bonus! Dubbele punten</p>
         <p id="question-text" class="question-text"></p>
-        <button id="btn-skip-tts" class="btn btn-skip" type="button" aria-label="Sla verhaal over, ga naar countdown" hidden>Naar countdown</button>
+        <button id="btn-skip-tts" class="btn btn-skip" type="button" aria-label="Sla verhaal over, ga naar countdown" hidden>Naar countdown &#9654;</button>
         <div id="countdown" class="countdown" aria-live="polite"></div>
-        <p class="hint">Na de countdown roep je het antwoord. Wachtmuziek als ondersteuning.</p>
+        <div id="mic-indicator" class="mic-indicator" hidden>
+          <div class="mic-icon-wrap">
+            <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="1" width="6" height="12" rx="3"/>
+              <path d="M5 10a7 7 0 0014 0"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+            </svg>
+            <div class="mic-pulse"></div>
+          </div>
+          <p class="mic-label">Luisteren&hellip;</p>
+        </div>
+        <p class="hint" id="hint-text">Na de countdown roep je het antwoord. Wachtmuziek als ondersteuning.</p>
       </section>
 
       <!-- Feedback -->
       <section id="screen-feedback" class="screen">
+        <div id="feedback-icon" class="feedback-icon"></div>
         <p id="feedback-result" class="feedback-result"></p>
         <p id="feedback-answer" class="feedback-answer"></p>
-        <button id="btn-next" class="btn btn-secondary btn-next-large" type="button" aria-label="Volgende verhaal">Volgende</button>
+        <div id="score-pop" class="score-pop" hidden></div>
+        <button id="btn-next" class="btn btn-secondary btn-next-large" type="button" aria-label="Volgende verhaal">Volgende &#8594;</button>
       </section>
 
       <!-- Einde ronde -->
       <section id="screen-end" class="screen">
-        <h2>Ronde afgerond</h2>
+        <div id="end-icon" class="end-icon"></div>
+        <h2 id="end-title">Ronde afgerond</h2>
         <p id="score-text" class="score-text"></p>
-        <button id="btn-restart" class="btn btn-primary" type="button" aria-label="Nog een ronde">Opnieuw</button>
+        <div id="end-stats" class="end-stats"></div>
+        <div id="high-score-msg" class="high-score-msg" hidden></div>
+        <button id="btn-restart" class="btn btn-primary" type="button" aria-label="Nog een ronde">Opnieuw spelen</button>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Verhalenverteller in de auto · TTS via auto-speakers</p>
+      <p>Verhalenverteller in de auto &middot; TTS via auto-speakers</p>
     </footer>
   </div>
 
-  <!-- Wachtmuziek: wait-music.wav — fade-in/out, 20s segmenten via Web Audio in app.js -->
-  <!-- Countdown: 3-2-1-go, speelt na de vraag, daarna microfoon -->
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
   <audio id="audio-countdown" preload="auto">
     <source src="sounds/countdown.mp3" type="audio/mpeg" />
   </audio>
