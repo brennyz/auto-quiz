@@ -397,7 +397,7 @@
     var listeningLabel = setTimeout(function () {
       countdownEl.textContent = 'Luisteren…';
     }, 1500);
-    listenForAnswer(10000).then(function (answers) {
+    listenForAnswer(15000).then(function (answers) {
       clearTimeout(listeningLabel);
       countdownEl.classList.remove('listening');
       countdownEl.textContent = '';
